@@ -1,0 +1,245 @@
+[
+  {
+    "input": {
+      "question": "Liz Rose has co-written songs with which artist including \"White Horse\" and \"You Belong with Me\"?",
+      "answer": "Taylor Swift",
+      "type": "bridge",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "artists who co-wrote songs including White Horse and You Belong with Me with Liz Rose"
+      ],
+      "reason": "one lookup is enough to find the artist who co-wrote those songs with Liz Rose",
+      "mode": "rewrite",
+      "model": "flash_lite_35",
+      "latency_seconds": 2.2956518000282813,
+      "wait_seconds": 0.0,
+      "tokens": 487,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "The Birthday of the World: and Other Stories was written by what fantasy and sci-fi author?",
+      "answer": "Ursula Kroeber Le Guin",
+      "type": "bridge",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "author of The Birthday of the World: and Other Stories"
+      ],
+      "reason": "The question asks for the author of a specific book title.",
+      "mode": "rewrite",
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2634123000025284,
+      "wait_seconds": 0.0,
+      "tokens": 474,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "Haier has North American rights to which appliance company headquartered in Louisville, Kentucky?",
+      "answer": "GE Appliances",
+      "type": "bridge",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "appliance company headquartered in Louisville Kentucky with North American rights held by Haier"
+      ],
+      "reason": "one lookup is enough",
+      "mode": "rewrite",
+      "model": "flash_lite_35",
+      "latency_seconds": 1.1473712000006344,
+      "wait_seconds": 0.0,
+      "tokens": 466,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "What public radio network in New York has allowed Eric Plakun to dis his psychiatric work?",
+      "answer": "WAMC",
+      "type": "bridge",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "Eric Plakun public radio network New York psychiatric work"
+      ],
+      "reason": "The question asks for a specific public radio network associated with Eric Plakun's commentary on his psychiatric work.",
+      "mode": "rewrite",
+      "model": "flash_lite_31",
+      "latency_seconds": 1.0212304999877233,
+      "wait_seconds": 0.0,
+      "tokens": 489,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "Which band has more members, Lawson or American Music Club?",
+      "answer": "Lawson",
+      "type": "comparison",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "How many members are in the band Lawson?",
+        "How many members are in the band American Music Club?"
+      ],
+      "reason": "comparison of two bands",
+      "mode": "decompose",
+      "model": "flash_lite_35",
+      "latency_seconds": 0.9463720000057947,
+      "wait_seconds": 0.0,
+      "tokens": 468,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "Which author is an economist, Czesław Miłosz or Bhabananda Deka?",
+      "answer": "Prof Bhabananda Deka",
+      "type": "comparison",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "Is Czesław Miłosz an economist?",
+        "Is Bhabananda Deka an economist?"
+      ],
+      "reason": "comparison of two people to determine which one is an economist",
+      "mode": "decompose",
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4076272000093013,
+      "wait_seconds": 0.0,
+      "tokens": 499,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "Who was a more acclaimed guitarist Stephen Christian or Joe Gooch?",
+      "answer": "and lead guitarist",
+      "type": "comparison",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "guitarist Stephen Christian accolades and career",
+        "guitarist Joe Gooch accolades and career"
+      ],
+      "reason": "comparison of two people",
+      "mode": "decompose",
+      "model": "flash_lite_35",
+      "latency_seconds": 0.9970418000011705,
+      "wait_seconds": 0.0,
+      "tokens": 465,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "Which of the following stars Jeff Bridges as a computer programmer: Tron or The Million Dollar Duck?",
+      "answer": "Tron",
+      "type": "comparison",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "Does Jeff Bridges play a computer programmer in the film Tron?",
+        "Does Jeff Bridges play a computer programmer in the film The Million Dollar Duck?"
+      ],
+      "reason": "comparison of two films to identify which one features Jeff Bridges as a computer programmer",
+      "mode": "decompose",
+      "model": "flash_lite_31",
+      "latency_seconds": 4.1485250999976415,
+      "wait_seconds": 0.0,
+      "tokens": 493,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "how do they make rag better at multi hop stuff",
+      "kind": "vague"
+    },
+    "output": {
+      "queries": [
+        "methods to improve multi-hop retrieval-augmented generation (RAG) performance"
+      ],
+      "reason": "one specific search query is enough to find techniques for multi-hop RAG",
+      "mode": "rewrite",
+      "model": "flash_lite_35",
+      "latency_seconds": 1.1927338000095915,
+      "wait_seconds": 0.0,
+      "tokens": 471,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "that new matryoshka retrieval thing",
+      "kind": "vague"
+    },
+    "output": {
+      "queries": [
+        "what is matryoshka representation learning for information retrieval"
+      ],
+      "reason": "the user is asking for an explanation of a specific technical concept in retrieval systems",
+      "mode": "rewrite",
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2969751000055112,
+      "wait_seconds": 0.0,
+      "tokens": 465,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "is quantization bad for search",
+      "kind": "vague"
+    },
+    "output": {
+      "queries": [
+        "impact of quantization on search quality and performance"
+      ],
+      "reason": "one specific search query is enough to find information about quantization for search",
+      "mode": "rewrite",
+      "model": "flash_lite_35",
+      "latency_seconds": 1.0807421999925282,
+      "wait_seconds": 0.0,
+      "tokens": 457,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "query": "Which retrieval method gives the best recall on HotpotQA, and how large is the gain?",
+      "previous_queries": [
+        "best retrieval method recall HotpotQA"
+      ],
+      "feedback": "The passages name methods but give no recall numbers or size of improvement.",
+      "question": "Which retrieval method gives the best recall on HotpotQA, and how large is the gain?",
+      "kind": "retry"
+    },
+    "output": {
+      "queries": [
+        "HotpotQA retrieval benchmark recall comparison table",
+        "state-of-the-art retrieval methods HotpotQA recall performance gain",
+        "quantitative analysis of retrieval models on HotpotQA dataset"
+      ],
+      "reason": "These queries focus on finding comparative performance metrics and specific recall improvements for retrieval methods on the HotpotQA dataset.",
+      "mode": "retry",
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1386373999994248,
+      "wait_seconds": 0.0,
+      "tokens": 314,
+      "cached": false
+    }
+  }
+]

@@ -1,0 +1,1766 @@
+{
+  "metrics": {
+    "n": 60,
+    "accuracy": 1.0,
+    "sufficient": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "not_sufficient": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "confusion": [
+      [
+        30,
+        0
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "confusion_order": [
+      "sufficient",
+      "not_sufficient"
+    ],
+    "fallbacks": 0,
+    "median_latency_seconds": 1.2704681000031997,
+    "per_source": {
+      "arxiv_chunk": {
+        "n": 50,
+        "accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 10,
+        "accuracy": 1.0
+      }
+    },
+    "near_miss": {
+      "n": 30,
+      "caught": 30,
+      "accuracy": 1.0
+    },
+    "models": [
+      "flash_lite_31"
+    ]
+  },
+  "results": [
+    {
+      "query_id": "chunk:2610.01974:abstract:0:1",
+      "query": "What is the URL of the project page mentioned in the Sim+Real research paper?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01257:abstract:0",
+        "2610.01619:abstract:0",
+        "2609.40190:abstract:1",
+        "2610.00487:abstract:0",
+        "2610.01749:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the URL of the project page for the Sim+Real research paper",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 2.327831000002334
+    },
+    {
+      "query_id": "chunk:2610.01513:abstract:0:0",
+      "query": "In which environment are the performance and properties of the Decision Titan model analysed to test sequential memory?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01513:abstract:0",
+        "2610.00722:abstract:0",
+        "2610.01468:abstract:0",
+        "2610.00903:abstract:0",
+        "2610.00604:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1564963000128046
+    },
+    {
+      "query_id": "chunk:2610.00436:abstract:0:1",
+      "query": "By how many points does LOOM improve on full-batch training for Llama-3.1-8B?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01153:abstract:1",
+        "2610.00493:abstract:1",
+        "2610.00890:abstract:1",
+        "2610.00991:abstract:0",
+        "2610.01153:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the performance improvement of LOOM on Llama-3.1-8B compared to full-batch training",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.5767921999795362
+    },
+    {
+      "query_id": "plain:2610.00767:abstract:0:0",
+      "query": "What is the name of the failure where a model starts treating made-up entities as if they were real after being fine-tuned on synthetic documents?",
+      "source": "plain_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00767:abstract:0",
+        "2610.01378:abstract:0",
+        "2610.01318:abstract:0",
+        "2610.01353:abstract:0",
+        "2609.40295:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.670363899989752
+    },
+    {
+      "query_id": "chunk:2610.01847:abstract:0:0",
+      "query": "What is the name of the approach introduced to directly detect inconsistencies in model specifications by auditing the specification text itself?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01847:abstract:0",
+        "2610.01345:abstract:0",
+        "2610.01471:abstract:0",
+        "2610.01348:abstract:0",
+        "2610.01378:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.077403500006767
+    },
+    {
+      "query_id": "chunk:2609.40235:abstract:0:0",
+      "query": "What is the name of the method that uses continuous token relaxations and pathwise gradients?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.02182:abstract:0",
+        "2610.02158:abstract:0",
+        "2610.01177:abstract:0",
+        "2610.01572:abstract:0",
+        "2610.02193:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the name of the method that uses continuous token relaxations and pathwise gradients",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.6129312999837566
+    },
+    {
+      "query_id": "chunk:2610.00610:abstract:0:1",
+      "query": "What composite score did the final system achieve on the official leaderboard for the IEEE BigData 2026 Cup?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00447:abstract:0",
+        "2610.00610:abstract:0",
+        "2610.00651:abstract:0",
+        "2610.00493:abstract:1",
+        "2610.01316:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1087215000006836
+    },
+    {
+      "query_id": "chunk:2610.01471:abstract:0:1",
+      "query": "What was the Jaccard similarity percentage between the errors found by the two reviewer models?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01471:abstract:0",
+        "2610.01023:abstract:0",
+        "2610.00694:abstract:0",
+        "2610.01241:abstract:0",
+        "2610.01801:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2241952999902423
+    },
+    {
+      "query_id": "chunk:2610.00693:abstract:0:1",
+      "query": "Which two datasets were used to demonstrate the effectiveness of FedMAD?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01616:abstract:0",
+        "2610.01692:abstract:0",
+        "2610.01218:abstract:0",
+        "2610.01234:abstract:0",
+        "2610.01096:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the two datasets used to demonstrate the effectiveness of FedMAD",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2507406999939121
+    },
+    {
+      "query_id": "chunk:2610.01353:abstract:0:1",
+      "query": "How do human-written introductions compare to generated ones in terms of move usage and order?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01353:abstract:0",
+        "2610.01046:abstract:0",
+        "2610.01316:abstract:0",
+        "2610.01170:abstract:0",
+        "2609.40322:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.108783100004075
+    },
+    {
+      "query_id": "chunk:2609.40360:abstract:0:1",
+      "query": "By how many percentage points did SCAPO improve AIME 2024-2026 accuracy over GRPO on Qwen3-4B-Base?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00493:abstract:1",
+        "2610.01153:abstract:1",
+        "2610.01434:abstract:1",
+        "2610.00436:abstract:1",
+        "2610.01955:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "The retrieved passages do not contain information regarding SCAPO, AIME 2024-2026 accuracy, or a comparison with GRPO on Qwen3-4B-Base.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 2.0505810999893583
+    },
+    {
+      "query_id": "chunk:2610.01184:abstract:0:1",
+      "query": "What percentage of unprotected remote accuracy does ReCast retain on ChartQA and NMSQA examples?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01801:abstract:0",
+        "2610.02001:abstract:1",
+        "2609.40190:abstract:1",
+        "2610.00523:abstract:0",
+        "2610.00858:abstract:1"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the percentage of unprotected remote accuracy that ReCast retains on ChartQA and NMSQA examples",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2127756999980193
+    },
+    {
+      "query_id": "chunk:2610.00899:abstract:0:1",
+      "query": "What is the benchmark environment where TOAST experiments were conducted to show improvements over its deterministic counterpart?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00694:abstract:0",
+        "2610.00447:abstract:0",
+        "2610.01110:abstract:0",
+        "2609.40190:abstract:0",
+        "2609.40322:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the benchmark environment where TOAST experiments were conducted",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 7.58698830002686
+    },
+    {
+      "query_id": "chunk:2610.01955:abstract:0:1",
+      "query": "What model was trained using single-epoch GRPO under a Brier-score reward in the forecasting paper?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01955:abstract:0",
+        "2610.00661:abstract:0",
+        "2610.01128:abstract:0",
+        "2609.40360:abstract:0",
+        "2610.01896:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3774317000061274
+    },
+    {
+      "query_id": "chunk:2610.00906:abstract:0:1",
+      "query": "On which benchmark did ActiveSaddler improve test Pass@1 by 7.5 percentage points?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2609.40190:abstract:0",
+        "2609.40190:abstract:1",
+        "2610.00436:abstract:1",
+        "2610.01218:abstract:0",
+        "2610.01153:abstract:1"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the benchmark on which ActiveSaddler improved test Pass@1 by 7.5 percentage points",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 11.5850999999966
+    },
+    {
+      "query_id": "chunk:2610.00997:abstract:0:0",
+      "query": "What method is introduced to mitigate the transfer of errors from teacher-generated answers to students by scoring candidate answers in a known direction?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00997:abstract:0",
+        "2610.00724:abstract:0",
+        "2609.40190:abstract:0",
+        "2610.02191:abstract:0",
+        "2610.02179:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4038064000196755
+    },
+    {
+      "query_id": "chunk:2610.01096:abstract:0:1",
+      "query": "What kind of data does a post-hoc out-of-distribution detector read the activations of?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01096:abstract:0",
+        "2610.01223:abstract:0",
+        "2610.01819:abstract:0",
+        "2610.00827:abstract:0",
+        "2610.01153:abstract:1"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2626573000161443
+    },
+    {
+      "query_id": "plain:2610.00983:abstract:0:0",
+      "query": "What specific mathematical issue occurs when using the standard method to measure reconstruction loss during the process of shrinking large language models?",
+      "source": "plain_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01554:abstract:0",
+        "2610.00694:abstract:0",
+        "2609.40295:abstract:0",
+        "2610.01241:abstract:0",
+        "2610.01493:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the specific mathematical issue that occurs when using KL divergence to measure reconstruction loss/compression reports, specifically regarding how it averages over tokens before taking the square root, which leads to inaccurate predictions of decision flips.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4268426999915391
+    },
+    {
+      "query_id": "chunk:2610.01530:abstract:0:0",
+      "query": "What algorithm does the multi-objective search employ for Pareto selection?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01530:abstract:0",
+        "2610.01260:abstract:0",
+        "2609.40361:abstract:0",
+        "2609.40340:abstract:0",
+        "2610.00493:abstract:1"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.446106499992311
+    },
+    {
+      "query_id": "chunk:2610.02142:abstract:1:0",
+      "query": "What percentage of the bf16 table remains bit-identical when evaluating keyword harnesses on small language models?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.02142:abstract:0",
+        "2610.02142:abstract:1",
+        "2610.01395:abstract:1",
+        "2610.01316:abstract:0",
+        "2609.40295:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4408885999873746
+    },
+    {
+      "query_id": "chunk:2610.01170:abstract:0:1",
+      "query": "How many experimental settings does HeadEdit improve across three tasks and three model families?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00890:abstract:1",
+        "2610.00526:abstract:1",
+        "2610.02001:abstract:0",
+        "2610.00680:abstract:0",
+        "2610.00636:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "The provided passages do not mention 'HeadEdit' or any experimental results associated with it.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2566460000234656
+    },
+    {
+      "query_id": "chunk:2610.00574:abstract:0:1",
+      "query": "In the context of mathematical reasoning, by what percentage did DARA reduce training steps to reach near-saturated length compliance?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.02191:abstract:0",
+        "2610.02179:abstract:0",
+        "2610.00890:abstract:1",
+        "2610.00493:abstract:1",
+        "2610.01435:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the percentage by which DARA reduced training steps to reach near-saturated length compliance",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.531019499991089
+    },
+    {
+      "query_id": "chunk:2610.01696:abstract:0:0",
+      "query": "What is the name of the concept-guided framework for targeted and selective debiasing?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2609.40124:abstract:0",
+        "2610.01696:abstract:0",
+        "2610.01834:abstract:0",
+        "2610.01819:abstract:0",
+        "2610.01006:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.410638100001961
+    },
+    {
+      "query_id": "chunk:2610.01324:abstract:0:1",
+      "query": "What was the Hit@10 score after applying biomedical reranking to the clinical notes?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01324:abstract:0",
+        "2610.00858:abstract:1",
+        "2610.01234:abstract:0",
+        "2609.40361:abstract:0",
+        "2610.00795:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3619124999968335
+    },
+    {
+      "query_id": "plain:2610.00778:abstract:0:0",
+      "query": "In goal-conditioned reinforcement learning, what type of learning models goal-reaching costs as quasimetric distances?",
+      "source": "plain_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00778:abstract:0",
+        "2610.01413:abstract:0",
+        "2610.01566:abstract:0",
+        "2610.01781:abstract:0",
+        "2610.00838:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1059881999972276
+    },
+    {
+      "query_id": "plain:2610.01456:abstract:0:0",
+      "query": "What specific property of a dataset does the new streaming algorithm adapt to without needing prior knowledge?",
+      "source": "plain_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01456:abstract:1",
+        "2610.01096:abstract:0",
+        "2610.01126:abstract:0",
+        "2610.01638:abstract:0",
+        "2610.01456:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.0963648000033572
+    },
+    {
+      "query_id": "chunk:2610.01384:abstract:0:0",
+      "query": "What is the name of the post-hoc method introduced to improve evidential robustness?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01384:abstract:0",
+        "2610.01096:abstract:0",
+        "2610.00827:abstract:0",
+        "2610.01456:abstract:0",
+        "2610.01801:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2018360000220127
+    },
+    {
+      "query_id": "chunk:2609.40195:abstract:0:1",
+      "query": "What is the name of the reinforcement learning framework proposed to optimize the memory writer?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00592:abstract:0",
+        "2610.01566:abstract:0",
+        "2610.01583:abstract:0",
+        "2610.01513:abstract:0",
+        "2610.00704:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "The provided passages do not mention a reinforcement learning framework specifically proposed to optimize a 'memory writer'. While ALER involves a 'Gumbel-Softmax write' to memory, it is not described as a framework to optimize the memory writer itself.",
+      "confidence": 0.9,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2118097999773454
+    },
+    {
+      "query_id": "plain:2610.01005:abstract:0:0",
+      "query": "What kind of analysis is used to illustrate the tolerance-based fairness auditing framework in predictive fairness?",
+      "source": "plain_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01005:abstract:0",
+        "2610.01645:abstract:0",
+        "2610.01963:abstract:1",
+        "2610.01377:abstract:0",
+        "2610.01514:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.173113299999386
+    },
+    {
+      "query_id": "chunk:2610.02159:abstract:0:1",
+      "query": "What type of information do policies acquire under the proposed formal criterion for exploration?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.02159:abstract:0",
+        "2610.01348:abstract:0",
+        "2610.01527:abstract:0",
+        "2610.00911:abstract:0",
+        "2610.01751:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.093166399979964
+    },
+    {
+      "query_id": "chunk:2610.01034:abstract:0:1",
+      "query": "What specific type of experiments were used to demonstrate the ability to steer a pretrained iMF image prior toward text-specified preferences?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01062:abstract:0",
+        "2610.01712:abstract:0",
+        "2610.01908:abstract:0",
+        "2610.01670:abstract:0",
+        "2610.00524:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the specific type of experiments used to demonstrate the ability to steer a pretrained iMF image prior toward text-specified preferences",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.808133499987889
+    },
+    {
+      "query_id": "chunk:2610.02163:abstract:0:1",
+      "query": "By what absolute percentage did AutoCompact improve pass rates over the base model on SWE-bench Verified?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00890:abstract:1",
+        "2609.40127:abstract:1",
+        "2609.40190:abstract:1",
+        "2610.00694:abstract:0",
+        "2610.02142:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the absolute percentage improvement of AutoCompact on SWE-bench Verified",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.314786999981152
+    },
+    {
+      "query_id": "chunk:2610.01799:abstract:0:0",
+      "query": "What backbone model does SkillEvoLean use to achieve proof success rates of 100.0%, 90.6%, 4/6, and 4/6 on its evaluated benchmarks?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00890:abstract:1",
+        "2610.02142:abstract:0",
+        "2610.00493:abstract:1",
+        "2610.00680:abstract:0",
+        "2610.00636:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "The backbone model used by SkillEvoLean to achieve the specified proof success rates.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2374465000175405
+    },
+    {
+      "query_id": "chunk:2610.00964:abstract:0:1",
+      "query": "What is the maximum percentage point gain yielded by context curation in RPTune evaluations?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00991:abstract:1",
+        "2610.00436:abstract:1",
+        "2609.40127:abstract:1",
+        "2610.01819:abstract:0",
+        "2609.40190:abstract:1"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the maximum percentage point gain yielded by context curation in RPTune evaluations",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1700506000197493
+    },
+    {
+      "query_id": "chunk:2610.01554:abstract:0:1",
+      "query": "By what percentage does QK-Wanda reduce QK reconstruction error at 50% sparsity?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01554:abstract:0",
+        "2610.00991:abstract:1",
+        "2609.40127:abstract:1",
+        "2610.00717:abstract:0",
+        "2610.00833:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1862934000091627
+    },
+    {
+      "query_id": "plain:2610.00851:abstract:0:0",
+      "query": "What is the maximum percentage gain in performance metrics achieved by the proposed method on the Semantic Shift Benchmark?",
+      "source": "plain_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01046:abstract:0",
+        "2610.02142:abstract:0",
+        "2610.01143:abstract:0",
+        "2610.01425:abstract:0",
+        "2610.01450:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the maximum percentage gain in performance metrics achieved by the proposed method on the Semantic Shift Benchmark",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3163372999988496
+    },
+    {
+      "query_id": "chunk:2609.40245:abstract:0:1",
+      "query": "Which baselines did the best-performing VLM underperform in the SocialNav-SUB benchmark?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2609.40127:abstract:1",
+        "2610.01395:abstract:1",
+        "2610.01468:abstract:0",
+        "2610.00991:abstract:1",
+        "2610.00447:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "The provided passages do not mention the 'SocialNav-SUB' benchmark or any VLM performance results related to it.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3771497999841813
+    },
+    {
+      "query_id": "chunk:2610.01054:abstract:0:1",
+      "query": "What is the GitHub URL provided for the Task Operator code?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00526:abstract:1",
+        "2610.00797:abstract:0",
+        "2610.02163:abstract:0",
+        "2610.00820:abstract:0",
+        "2610.00929:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the GitHub URL for the Task Operator code",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1162806999927852
+    },
+    {
+      "query_id": "chunk:2610.01634:abstract:0:1",
+      "query": "What is the CER achieved by Yo-ByT5 on the YAD benchmark?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00436:abstract:1",
+        "2610.01634:abstract:0",
+        "2610.01153:abstract:1",
+        "2609.40127:abstract:1",
+        "2610.01468:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 2.595671700022649
+    },
+    {
+      "query_id": "plain:2610.00621:abstract:0:0",
+      "query": "What type of model framework was used to develop the approach for improving response diversity in chat systems?",
+      "source": "plain_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00621:abstract:0",
+        "2610.01490:abstract:0",
+        "2610.01382:abstract:0",
+        "2610.01471:abstract:0",
+        "2610.01316:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2126385000010487
+    },
+    {
+      "query_id": "chunk:2610.00812:abstract:0:1",
+      "query": "In the survey on video generation models, how many broad categories are existing approaches organized into?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00809:abstract:0",
+        "2610.00812:abstract:0",
+        "2610.00686:abstract:0",
+        "2610.01785:abstract:0",
+        "2610.01619:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3577635000110604
+    },
+    {
+      "query_id": "chunk:2610.00742:abstract:0:0",
+      "query": "What protein representation model does StabilityArc map frozen residue representations from?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00742:abstract:0",
+        "2610.00988:abstract:0",
+        "2610.00665:abstract:0",
+        "2610.01381:abstract:0",
+        "2610.00672:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1002609000133816
+    },
+    {
+      "query_id": "chunk:2610.00717:abstract:0:0",
+      "query": "What is the acronym for the sequential structured compression framework proposed for LLM attention?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00717:abstract:0",
+        "2610.01434:abstract:0",
+        "2610.00910:abstract:1",
+        "2610.00923:abstract:0",
+        "2609.40127:abstract:1"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1410668999888003
+    },
+    {
+      "query_id": "chunk:2610.01434:abstract:0:0",
+      "query": "What is the name of the pruning method proposed for efficient MLLMs in MWOP?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01554:abstract:0",
+        "2610.01456:abstract:0",
+        "2610.01434:abstract:1",
+        "2610.00983:abstract:0",
+        "2609.40159:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the name of the pruning method proposed in MWOP",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.215264099999331
+    },
+    {
+      "query_id": "chunk:2610.01823:abstract:0:0",
+      "query": "What software environment is available for generalized engression models?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01974:abstract:0",
+        "2610.01110:abstract:0",
+        "2610.01428:abstract:0",
+        "2610.01026:abstract:0",
+        "2610.02001:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the software environment available for generalized engression models",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3497228000196628
+    },
+    {
+      "query_id": "chunk:2610.00465:abstract:0:1",
+      "query": "What is the WikiText-2 perplexity degradation percentage of AIR-LLM on LLaMA-3.1-8B?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01153:abstract:1",
+        "2609.40190:abstract:1",
+        "2610.00436:abstract:1",
+        "2610.00694:abstract:0",
+        "2610.00833:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the WikiText-2 perplexity degradation percentage of AIR-LLM on LLaMA-3.1-8B",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2704681000031997
+    },
+    {
+      "query_id": "chunk:2609.40235:abstract:0:1",
+      "query": "How many NFEs does Simplex-DMD require to achieve a generative perplexity of 45.6?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00523:abstract:0",
+        "2609.40127:abstract:1",
+        "2609.40235:abstract:0",
+        "2610.01153:abstract:1",
+        "2610.00833:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.0342422999965493
+    },
+    {
+      "query_id": "chunk:2610.02173:abstract:0:1",
+      "query": "How many downstream directions in total were identified as following the affine law across the tested models?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00445:abstract:0",
+        "2609.40190:abstract:1",
+        "2610.00833:abstract:0",
+        "2610.00858:abstract:1",
+        "2610.00694:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "The provided passages do not mention an 'affine law' or any count of downstream directions identified as following such a law across the tested models.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.189880499994615
+    },
+    {
+      "query_id": "chunk:2610.00664:abstract:0:0",
+      "query": "How many question-answer pairs are included in the PhysicsMate benchmark?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00664:abstract:0",
+        "2609.40190:abstract:1",
+        "2609.40190:abstract:0",
+        "2610.00636:abstract:0",
+        "2610.00890:abstract:1"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.008435100025963
+    },
+    {
+      "query_id": "plain:2610.00751:abstract:0:0",
+      "query": "On which dataset were biomedical applications investigated using MedMNIST-C corruptions at five severity levels?",
+      "source": "plain_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00984:abstract:0",
+        "2610.01616:abstract:0",
+        "2610.01497:abstract:0",
+        "2610.01963:abstract:1",
+        "2610.01284:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the dataset used for investigating biomedical applications with MedMNIST-C corruptions at five severity levels",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2148504999931902
+    },
+    {
+      "query_id": "chunk:2610.00996:abstract:0:0",
+      "query": "What type of dataset was used to conduct experiments for the reliability-aware roll prediction method?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00996:abstract:0",
+        "2610.01218:abstract:0",
+        "2610.01284:abstract:0",
+        "2610.00993:abstract:0",
+        "2609.40111:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.9157754000043496
+    },
+    {
+      "query_id": "chunk:2609.40361:abstract:0:1",
+      "query": "By how many percentage points did Ranking-PE beat the accuracy-based recipe on fine-tuned Qwen3-VL-8B?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00447:abstract:0",
+        "2610.00493:abstract:1",
+        "2610.00436:abstract:1",
+        "2610.01434:abstract:1",
+        "2609.40127:abstract:1"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the performance difference between Ranking-PE and the accuracy-based recipe on fine-tuned Qwen3-VL-8B",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 0.8443328999856021
+    },
+    {
+      "query_id": "chunk:2609.40143:abstract:0:0",
+      "query": "What coding agent searched over executable designer programs to produce GRADASLIM?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00650:abstract:0",
+        "2610.00850:abstract:0",
+        "2610.00948:abstract:0",
+        "2610.00797:abstract:0",
+        "2610.00675:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "The name of the coding agent that searched over executable designer programs to produce GRADASLIM.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3534710000094492
+    },
+    {
+      "query_id": "plain:2610.00906:abstract:0:0",
+      "query": "By how many percentage points did the method improve test Pass@1 on Terminal-Bench 2.0 compared to using a fixed scenario order?",
+      "source": "plain_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00890:abstract:1",
+        "2610.00858:abstract:1",
+        "2609.40190:abstract:0",
+        "2610.01023:abstract:0",
+        "2610.00447:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the percentage point improvement of the method on Terminal-Bench 2.0 compared to a fixed scenario order",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3206861999933608
+    },
+    {
+      "query_id": "chunk:2610.01533:abstract:0:1",
+      "query": "What is the maximum percentage improvement in Hit@10 achieved by GrIS over CF-aware SOTA?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01153:abstract:1",
+        "2610.00493:abstract:1",
+        "2610.01468:abstract:0",
+        "2610.00523:abstract:0",
+        "2609.40127:abstract:1"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the maximum percentage improvement in Hit@10 achieved by GrIS over CF-aware SOTA",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.0591377000091597
+    },
+    {
+      "query_id": "chunk:2610.00907:abstract:0:0",
+      "query": "What is the name of the sampling approach that shrinks the inference context for relational foundation models?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00907:abstract:0",
+        "2610.02128:abstract:0",
+        "2610.00910:abstract:0",
+        "2610.00940:abstract:0",
+        "2610.00910:abstract:1"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2631938999984413
+    },
+    {
+      "query_id": "chunk:2610.01963:abstract:1:1",
+      "query": "What does counterfactual auditing serve as a lightweight, clinically interpretable framework for comparing in open-source LLMs?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.01963:abstract:1",
+        "2610.01963:abstract:0",
+        "2610.01497:abstract:0",
+        "2610.01514:abstract:0",
+        "2610.01938:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.5372840000200085
+    },
+    {
+      "query_id": "chunk:2610.00903:abstract:0:0",
+      "query": "Which data-free objective reached an entry entropy of 0.07 nats?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00545:abstract:1",
+        "2610.00523:abstract:0",
+        "2610.01468:abstract:0",
+        "2610.01508:abstract:0",
+        "2610.01530:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the name of the data-free objective that reached an entry entropy of 0.07 nats",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4378317999944557
+    },
+    {
+      "query_id": "chunk:2610.00797:abstract:0:0",
+      "query": "What is the name of the policy engine presented for enforcing stateful contextual policies in autonomous AI agents?",
+      "source": "arxiv_chunk",
+      "label": "sufficient",
+      "chunk_ids": [
+        "2610.00797:abstract:0",
+        "2610.02159:abstract:0",
+        "2610.00759:abstract:0",
+        "2609.40306:abstract:0",
+        "2610.01348:abstract:0"
+      ],
+      "prediction": "sufficient",
+      "missing": "",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4189041000208817
+    },
+    {
+      "query_id": "plain:2610.00954:abstract:0:0",
+      "query": "What is the strict prompt accuracy percentage achieved by the best ensemble on the benchmark mentioned?",
+      "source": "plain_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00436:abstract:1",
+        "2609.40190:abstract:0",
+        "2610.01819:abstract:0",
+        "2610.00991:abstract:0",
+        "2610.00523:abstract:0"
+      ],
+      "prediction": "not_sufficient",
+      "missing": "the strict prompt accuracy percentage achieved by the best ensemble on the benchmark mentioned",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.446591600019019
+    }
+  ],
+  "near_miss_results": [
+    {
+      "query_id": "chunk:2610.01738:abstract:0:0",
+      "query": "What is the number of OULAD courses analyzed in the study?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00493:abstract:1",
+        "2609.40190:abstract:1",
+        "2610.00664:abstract:0",
+        "2610.00795:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the number of OULAD courses analyzed in the study",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 0.9298723000101745
+    },
+    {
+      "query_id": "chunk:2610.01641:abstract:0:0",
+      "query": "What does MCIR-M stand for as a dependence-aware global feature-importance approach?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01096:abstract:0",
+        "2610.01821:abstract:0",
+        "2610.01223:abstract:0",
+        "2610.00683:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the definition or expansion of the acronym MCIR-M",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1962594999931753
+    },
+    {
+      "query_id": "chunk:2610.01786:abstract:0:0",
+      "query": "What is the name of the framework introduced to identify regime-specific latent timescales from neural observations?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.02058:abstract:0",
+        "2609.40292:abstract:0",
+        "2610.00819:abstract:0",
+        "2609.40117:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the framework introduced to identify regime-specific latent timescales from neural observations",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3744187999982387
+    },
+    {
+      "query_id": "chunk:2609.40118:abstract:0:1",
+      "query": "By approximately what percentage does ReCAP reduce estimated latency for compaction and cold restoration compared to Codex's default summarization-based compaction?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00694:abstract:0",
+        "2610.01554:abstract:0",
+        "2610.02001:abstract:1",
+        "2610.00717:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "The provided passages do not contain any information regarding 'ReCAP', 'Codex', or their respective latency reduction percentages for compaction and cold restoration.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.5202358999813441
+    },
+    {
+      "query_id": "chunk:2610.02179:abstract:0:0",
+      "query": "What is the name of the model studied with four domain teachers in multi-teacher on-policy distillation?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01435:abstract:0",
+        "2610.00997:abstract:0",
+        "2610.00838:abstract:0",
+        "2610.02117:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the model studied with four domain teachers in multi-teacher on-policy distillation",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.0650410999951418
+    },
+    {
+      "query_id": "chunk:2610.00587:abstract:0:0",
+      "query": "What does GDELT stand for in Comparison of Common Crawl News & GDELT?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2609.40340:abstract:0",
+        "2610.02002:abstract:0",
+        "2610.01023:abstract:0",
+        "2610.01955:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the definition or full name of GDELT",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2151203000103123
+    },
+    {
+      "query_id": "chunk:2610.01127:abstract:0:0",
+      "query": "What is the name of the text encoding algorithm that determines the best segmentation by globally minimizing cost?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01175:abstract:0",
+        "2610.01434:abstract:0",
+        "2610.01199:abstract:0",
+        "2610.01785:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the text encoding algorithm that determines the best segmentation by globally minimizing cost",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1609899000031874
+    },
+    {
+      "query_id": "chunk:2610.01751:abstract:0:0",
+      "query": "What is the name of the statistical adoption layer introduced for moving-incumbent search?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2609.40340:abstract:0",
+        "2610.01819:abstract:0",
+        "2610.01583:abstract:0",
+        "2610.00675:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the statistical adoption layer introduced for moving-incumbent search",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1441229000047315
+    },
+    {
+      "query_id": "chunk:2610.00535:abstract:0:0",
+      "query": "What is the acronym for the proposed input-adaptive conformal framework for image regression in Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01193:abstract:0",
+        "2610.00922:abstract:0",
+        "2610.00523:abstract:0",
+        "2610.00873:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the acronym for the proposed input-adaptive conformal framework for image regression in Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1589279000181705
+    },
+    {
+      "query_id": "chunk:2610.01064:abstract:0:1",
+      "query": "Which challenging enterprise benchmark with multi-hop table requirements shows that JOINGR substantially improves recall?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01118:abstract:0",
+        "2610.00817:abstract:0",
+        "2610.02002:abstract:0",
+        "2610.01395:abstract:1"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "The name of the challenging enterprise benchmark with multi-hop table requirements where JOINGR improves recall.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.5799814999918453
+    },
+    {
+      "query_id": "chunk:2610.01399:abstract:0:1",
+      "query": "In Reusing Past Samples in Proximal Policy Optimization: When and How Does It Help?, what kind of tasks are used to empirically study sample efficiency?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01546:abstract:0",
+        "2609.40149:abstract:0",
+        "2610.02140:abstract:0",
+        "2610.01413:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "The provided passages do not contain information about the paper 'Reusing Past Samples in Proximal Policy Optimization: When and How Does It Help?' or the tasks used in that specific study.",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.6644089999899734
+    },
+    {
+      "query_id": "chunk:2610.01823:abstract:0:1",
+      "query": "How many species are in the community ecology benchmark for generalized engression models?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00694:abstract:0",
+        "2610.00445:abstract:0",
+        "2609.40140:abstract:0",
+        "2610.01037:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the number of species in the community ecology benchmark for generalized engression models",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 3.9080262999923434
+    },
+    {
+      "query_id": "chunk:2609.40287:abstract:0:0",
+      "query": "What is the name of the preconditioned manifold matching framework for one-step physics-constrained generation?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01515:abstract:0",
+        "2610.02084:abstract:0",
+        "2610.01315:abstract:0",
+        "2610.01193:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the preconditioned manifold matching framework for one-step physics-constrained generation",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4599926999944728
+    },
+    {
+      "query_id": "chunk:2610.00682:abstract:0:0",
+      "query": "From what type of ontology does the proposed pipeline automatically generate ontology-grounded multiple-choice question benchmarks?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00664:abstract:0",
+        "2610.01393:abstract:0",
+        "2610.00940:abstract:0",
+        "2610.01110:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the specific type of ontology from which the proposed pipeline automatically generates ontology-grounded multiple-choice question benchmarks",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3555747000209522
+    },
+    {
+      "query_id": "chunk:2610.01578:abstract:0:1",
+      "query": "What kind of pilot study finds benefits from greater mask diversity on downstream language tasks?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00928:abstract:0",
+        "2610.00540:abstract:0",
+        "2610.01471:abstract:0",
+        "2610.01165:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the specific pilot study that finds benefits from greater mask diversity on downstream language tasks",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2605442999920342
+    },
+    {
+      "query_id": "chunk:2610.00818:abstract:0:0",
+      "query": "How many ambulance attendances were analyzed in the study of Victorian Emergency Medical Services?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01963:abstract:0",
+        "2610.01306:abstract:0",
+        "2610.00562:abstract:0",
+        "2610.01963:abstract:1"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the number of ambulance attendances analyzed in the study of Victorian Emergency Medical Services",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.246272400021553
+    },
+    {
+      "query_id": "chunk:2610.01963:abstract:0:1",
+      "query": "What was the any-shift rate of the fine-tuned Qwen2.5-7B model in the clinical triage auditing study?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01434:abstract:1",
+        "2610.01963:abstract:1",
+        "2610.01471:abstract:0",
+        "2610.00436:abstract:1"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the any-shift rate of the fine-tuned Qwen2.5-7B model in the clinical triage auditing study",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.275267499993788
+    },
+    {
+      "query_id": "chunk:2610.00651:abstract:0:1",
+      "query": "What is the projected reliability when pooling diverse benchmarks for cross-task rankings?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2609.40190:abstract:0",
+        "2610.00447:abstract:0",
+        "2609.40241:abstract:0",
+        "2610.00523:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the projected reliability when pooling diverse benchmarks for cross-task rankings",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4218647999805398
+    },
+    {
+      "query_id": "chunk:2610.02195:abstract:0:0",
+      "query": "What type of tilt folds a state cost into the reference process in cost-augmented Schrödinger bridges on graphs?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01434:abstract:1",
+        "2609.40159:abstract:0",
+        "2610.01373:abstract:0",
+        "2610.02043:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the specific type of tilt used to fold a state cost into the reference process in cost-augmented Schrödinger bridges on graphs",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2595304000133183
+    },
+    {
+      "query_id": "chunk:2610.02092:abstract:0:0",
+      "query": "What is the name of the scalable data-selection framework proposed in the study on data selection for training large language models?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01592:abstract:0",
+        "2609.40286:abstract:0",
+        "2609.40241:abstract:0",
+        "2609.40340:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the scalable data-selection framework for training large language models",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 2.7105639000074007
+    },
+    {
+      "query_id": "chunk:2610.00689:abstract:0:0",
+      "query": "What is the accuracy of small Qwen3 models on label-flipping perturbations?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00436:abstract:1",
+        "2610.01434:abstract:1",
+        "2609.40127:abstract:1",
+        "2610.00694:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the accuracy of small Qwen3 models on label-flipping perturbations",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.2103534000052605
+    },
+    {
+      "query_id": "chunk:2610.00647:abstract:0:0",
+      "query": "What mathematical objects do learned word embeddings consist of when co-occurrence statistics are invariant under a group G?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01016:abstract:0",
+        "2610.02040:abstract:0",
+        "2610.00910:abstract:1",
+        "2610.01688:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the mathematical objects that learned word embeddings consist of when co-occurrence statistics are invariant under a group G",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3942966000176966
+    },
+    {
+      "query_id": "chunk:2610.01453:abstract:0:0",
+      "query": "What is the name of the post-hoc framework for adapting models under task obsolescence?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00526:abstract:1",
+        "2610.00928:abstract:0",
+        "2610.00431:abstract:0",
+        "2610.00873:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the post-hoc framework for adapting models under task obsolescence",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 6.128060499991989
+    },
+    {
+      "query_id": "chunk:2610.00722:abstract:0:1",
+      "query": "By what percentage did JEPA-TTT improve planning performance over the frozen JEPA world model?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01955:abstract:0",
+        "2610.01559:abstract:0",
+        "2610.01834:abstract:0",
+        "2610.01006:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the percentage improvement of JEPA-TTT over the frozen JEPA world model in planning performance",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.5629978000069968
+    },
+    {
+      "query_id": "chunk:2610.00969:abstract:0:1",
+      "query": "What practical failure mode in financial analysis involves LLMs detecting when available evidence is insufficient?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01963:abstract:1",
+        "2610.00833:abstract:0",
+        "2610.01218:abstract:0",
+        "2610.01348:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "The passages do not describe a specific 'practical failure mode' in financial analysis where LLMs detect insufficient evidence; while they discuss evidence-based verification and RAG quality gates in general or synthetic market contexts, they do not link a specific failure mode to the domain of financial analysis.",
+      "confidence": 0.95,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.361157599982107
+    },
+    {
+      "query_id": "chunk:2610.01497:abstract:0:1",
+      "query": "What is the name of the seven-module framework developed to reduce over-refusal in molecular tumor board safety evaluation?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00858:abstract:0",
+        "2610.01963:abstract:1",
+        "2610.00858:abstract:1",
+        "2610.01616:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the seven-module framework developed to reduce over-refusal in molecular tumor board safety evaluation",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.4030683000164572
+    },
+    {
+      "query_id": "plain:2609.40143:abstract:0:0",
+      "query": "What is the term used to describe selecting an exact-length, order-preserving subsequence while keeping activity?",
+      "source": "plain_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01456:abstract:1",
+        "2610.01828:abstract:0",
+        "2610.00923:abstract:0",
+        "2610.00771:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the term used to describe selecting an exact-length, order-preserving subsequence while keeping activity",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.1587063999904785
+    },
+    {
+      "query_id": "chunk:2610.00683:abstract:0:0",
+      "query": "What generative framework extends Boltzmann generators to the grand canonical ensemble?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.01355:abstract:0",
+        "2610.00569:abstract:0",
+        "2610.01034:abstract:0",
+        "2610.01382:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the name of the generative framework that extends Boltzmann generators to the grand canonical ensemble",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.590043300006073
+    },
+    {
+      "query_id": "chunk:2609.40316:abstract:0:1",
+      "query": "Approximately how much total-parameter efficiency on reasoning does recurrence yield?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00541:abstract:0",
+        "2610.02185:abstract:0",
+        "2610.00571:abstract:0",
+        "2610.01153:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "The retrieved passages do not provide a general quantitative estimate or a specific percentage for the total-parameter efficiency gained by recurrence on reasoning tasks; they only mention that one specific model (RRM) achieves 50-75% fewer parameters on reasoning tasks.",
+      "confidence": 0.9,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.3104784000024665
+    },
+    {
+      "query_id": "chunk:2610.00604:abstract:0:0",
+      "query": "How many language-conditioned manipulation tasks are included in the MIKASA-Robo-VLA benchmark?",
+      "source": "arxiv_chunk",
+      "label": "not_sufficient",
+      "chunk_ids": [
+        "2610.00524:abstract:0",
+        "2610.00954:abstract:0",
+        "2610.00540:abstract:0",
+        "2610.01491:abstract:0"
+      ],
+      "kind": "near_miss",
+      "prediction": "not_sufficient",
+      "missing": "the number of language-conditioned manipulation tasks included in the MIKASA-Robo-VLA benchmark",
+      "confidence": 1.0,
+      "fallback": false,
+      "model": "flash_lite_31",
+      "latency_seconds": 1.5805989000073168
+    }
+  ]
+}

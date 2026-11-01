@@ -1,0 +1,375 @@
+{
+  "summary": {
+    "off": {
+      "lite_calls": 78,
+      "correct": 13
+    },
+    "on": {
+      "lite_calls": 68,
+      "correct": 12
+    }
+  },
+  "answers_changed": 1,
+  "records": [
+    {
+      "query": "What is the maximum exact-command accuracy achieved by any open-weight model in the unrestricted setting of KaliBench?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "42%",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "42%",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What benchmark dataset is used alongside controlled synthetic redundancy experiments to evaluate MCIR?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "UCI HAR benchmark",
+        "correct": 1,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "The provided context does not contain information about a benchmark dataset used alongside controlled synthetic redundancy experiments to evaluate MCIR.",
+        "correct": 0,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "same_missing"
+      }
+    },
+    {
+      "query": "What is the name of the automatic harness optimizer introduced for self-improving GUI agents?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "GUI-HARVEST",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "GUI-HARVEST",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What is the name of the probability surface proposed to weight heterogeneous per-step costs in diffusion LLMs?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "The passage does not mention a probability surface proposed to weight heterogeneous per-step costs in diffusion LLMs.",
+        "correct": 0,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      },
+      "on": {
+        "answer": "The passage does not mention a probability surface proposed to weight heterogeneous per-step costs in diffusion LLMs.",
+        "correct": 0,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "same_missing"
+      }
+    },
+    {
+      "query": "In Prediction-powered Neural Architecture Search, what information provided by ZCPs does PPNAS exploit to construct additional supervision?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "Ordinal information",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "Ordinal information",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What learning technique does MatRAG combine with RAG systems to reduce computational costs?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "MatRAG combines Matryoshka Representation Learning (MRL) with RAG systems.",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "MatRAG combines Matryoshka Representation Learning (MRL) with RAG systems.",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "In the anomaly detector paper, what kind of features do the discovered compact detectors use to describe short windows?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "The discovered compact detectors use local spectral features to describe short windows.",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "The discovered compact detectors use local spectral features to describe short windows.",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "In evidence conflicts regarding disease prediction, what percentage of cases did BioReason and Evo2 follow the text?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "97.9%",
+        "correct": 1,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      },
+      "on": {
+        "answer": "97.9%",
+        "correct": 1,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      }
+    },
+    {
+      "query": "What physics refiner enhances global stability by correcting model forecasts to reduce long-horizon numerical drift?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "The physics refiner that enhances global stability by correcting model forecasts to reduce long-horizon numerical drift is the graph neural operator.",
+        "correct": 0,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "The physics refiner that enhances global stability by correcting model forecasts to reduce long-horizon numerical drift is the graph neural operator.",
+        "correct": 0,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "Which specific reinforcement learning method was used as a matched critic-free baseline because it has no learned value function?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "TD3+BC",
+        "correct": 0,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      },
+      "on": {
+        "answer": "TD3+BC",
+        "correct": 0,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "same_missing"
+      }
+    },
+    {
+      "query": "What is the name of the metric-agnostic, regime-decomposed diagnostic tool introduced for auditing systematic mismatch?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "Regime-wise Relative Bias Vector (RBV)",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "Regime-wise Relative Bias Vector (RBV)",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What is the ROC-AUC range reached by the safe prototype on human-labeled corpora in the evaluation of response-safety embeddings?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "0.457-0.545",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "0.457-0.545",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What percentage of the target's own descriptor gain is retained during cross-model transfer?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "74-80 percent",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "74-80 percent",
+        "correct": 1,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What is the percentage of retrieval for the archived episode at k=32 under completion-only elastic alignment?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "Cannot find in the context.",
+        "correct": 0,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      },
+      "on": {
+        "answer": "Cannot find in the context.",
+        "correct": 0,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "same_missing"
+      }
+    },
+    {
+      "query": "What is the GitHub repository URL for the LOOM project?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "https://github.com/hed-ucas/LOOM",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "https://github.com/hed-ucas/LOOM",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "How many subjects were included in the WESAD dataset used for the study?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "The context does not provide information about the WESAD dataset or the number of subjects included in it.",
+        "correct": 0,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      },
+      "on": {
+        "answer": "The context does not provide information about the WESAD dataset or the number of subjects included in it.",
+        "correct": 0,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "same_missing"
+      }
+    },
+    {
+      "query": "What specific type of image-text model was used to test the ability to steer image priors toward text-specified preferences?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "PrefPI",
+        "correct": 0,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "PrefPI",
+        "correct": 0,
+        "retries": 1,
+        "lite_calls": 4,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What is the name of the method proposed in Towards Fast and Disentangled Counterfactuals for Visual Foundation Models that wraps a frozen foundation model in a conditional diffusion decoder?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "Disentangled Diffusion Autoencoders (DiDAE)",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "Disentangled Diffusion Autoencoders (DiDAE)",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    },
+    {
+      "query": "What distance metric does Sinkhorn DRSB achieve lower mean values for compared to fixed-level noise augmentation on Gaussian mixture transport?",
+      "proxy_label": "not_sufficient",
+      "off": {
+        "answer": "The context provided does not contain information about Sinkhorn DRSB or fixed-level noise augmentation on Gaussian mixture transport, so the answer is that it cannot be found in the context.",
+        "correct": 0,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      },
+      "on": {
+        "answer": "The context provided does not contain information about Sinkhorn DRSB or fixed-level noise augmentation on Gaussian mixture transport, so the answer is that it cannot be found in the context.",
+        "correct": 0,
+        "retries": 2,
+        "lite_calls": 6,
+        "stop_reason": "max_retries"
+      }
+    },
+    {
+      "query": "On what specific model does a free-energy cost lower the expected barrier of the folding paths?",
+      "proxy_label": "sufficient",
+      "off": {
+        "answer": "protein-folding model",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      },
+      "on": {
+        "answer": "protein-folding model",
+        "correct": 1,
+        "retries": 0,
+        "lite_calls": 2,
+        "stop_reason": "sufficient"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "chunks_file": "C:\\Users\\Keerat\\Desktop\\Projects\\AgenticRAG\\data\\processed\\chunks_scale.jsonl",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collections": {
+    "scale_fp32": {
+      "upload_seconds": 103.83548559993505,
+      "index_seconds": 40.177845400059596,
+      "indexed": true,
+      "points": 343235,
+      "indexed_vectors": 343235,
+      "status": "green",
+      "total_seconds": 144.33916940004565
+    },
+    "scale_int8": {
+      "upload_seconds": 94.82470189989544,
+      "index_seconds": 20.0736256998498,
+      "indexed": true,
+      "points": 343235,
+      "indexed_vectors": 343235,
+      "status": "green",
+      "total_seconds": 115.18880869983695
+    }
+  }
+}

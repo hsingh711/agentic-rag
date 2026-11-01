@@ -1,0 +1,261 @@
+{
+  "training": {
+    "device": "cuda",
+    "epochs_configured": 3,
+    "epochs_run": 2.0,
+    "train_seconds": 11.2,
+    "class_weights": [
+      1.1771,
+      0.8692
+    ],
+    "best_val_macro_f1_at_argmax": 0.9269,
+    "val_history": [
+      {
+        "epoch": 1.0,
+        "macro_f1": 0.9269,
+        "retrieve_recall": 0.9722
+      },
+      {
+        "epoch": 2.0,
+        "macro_f1": 0.9052,
+        "retrieve_recall": 0.8472
+      }
+    ]
+  },
+  "splits": {
+    "train": 1017,
+    "val": 127,
+    "test": 128,
+    "challenge": 100
+  },
+  "calibration": {
+    "temperature": 0.8683,
+    "fitted_on": "validation",
+    "val_log_loss_raw": 0.1336,
+    "val_log_loss_calibrated": 0.1316
+  },
+  "threshold_selection": {
+    "threshold": 0.5,
+    "retrieve_recall": 0.9722,
+    "skip_rate": 0.3937,
+    "macro_f1": 0.9269,
+    "target_recall": 0.95,
+    "rule": "default 0.5 already meets the recall target",
+    "chosen_on": "validation"
+  },
+  "test": {
+    "metrics": {
+      "threshold": 0.5,
+      "count": 128,
+      "accuracy": 0.9297,
+      "retrieve": {
+        "precision": 0.9221,
+        "recall": 0.9595,
+        "f1": 0.9404,
+        "support": 74
+      },
+      "skip": {
+        "precision": 0.9412,
+        "recall": 0.8889,
+        "f1": 0.9143,
+        "support": 54
+      },
+      "macro_f1": 0.9273,
+      "retrieve_recall": 0.9595,
+      "skip_rate": 0.3984,
+      "confusion_matrix": {
+        "rows_true_cols_pred": [
+          "skip",
+          "retrieve"
+        ],
+        "matrix": [
+          [
+            48,
+            6
+          ],
+          [
+            3,
+            71
+          ]
+        ]
+      }
+    },
+    "confidence_intervals_95": {
+      "accuracy": {
+        "low": 0.8828,
+        "high": 0.9766,
+        "samples": 1000
+      },
+      "macro_f1": {
+        "low": 0.8774,
+        "high": 0.9736,
+        "samples": 1000
+      },
+      "retrieve_recall": {
+        "low": 0.9077,
+        "high": 1.0,
+        "samples": 1000
+      },
+      "skip_rate": {
+        "low": 0.3125,
+        "high": 0.4844,
+        "samples": 1000
+      }
+    },
+    "by_source": {
+      "arithmetic": {
+        "count": 9,
+        "accuracy": 1.0,
+        "true_retrieve": 0,
+        "true_skip": 9,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "arxiv_chunk": {
+        "count": 68,
+        "accuracy": 0.9412,
+        "true_retrieve": 67,
+        "true_skip": 1,
+        "majority_label": "retrieve",
+        "minority_correct": 0,
+        "minority_total": 1
+      },
+      "concept_question": {
+        "count": 7,
+        "accuracy": 0.2857,
+        "true_retrieve": 0,
+        "true_skip": 7,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "nq": {
+        "count": 5,
+        "accuracy": 1.0,
+        "true_retrieve": 0,
+        "true_skip": 5,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "plain_chunk": {
+        "count": 7,
+        "accuracy": 1.0,
+        "true_retrieve": 7,
+        "true_skip": 0,
+        "majority_label": "retrieve",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "triviaqa": {
+        "count": 32,
+        "accuracy": 1.0,
+        "true_retrieve": 0,
+        "true_skip": 32,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      }
+    },
+    "calibration": {
+      "ece_raw": 0.0552,
+      "ece_calibrated": 0.041,
+      "log_loss_raw": 0.1752,
+      "log_loss_calibrated": 0.1824
+    }
+  },
+  "baseline_always_retrieve_test": {
+    "accuracy": 0.5781,
+    "macro_f1": 0.3663,
+    "retrieve_recall": 1.0,
+    "skip_rate": 0.0
+  },
+  "cpu_latency_ms_per_query_median": 11.8567,
+  "challenge": {
+    "metrics": {
+      "threshold": 0.5,
+      "count": 100,
+      "accuracy": 0.76,
+      "retrieve": {
+        "precision": 0.7031,
+        "recall": 0.9,
+        "f1": 0.7895,
+        "support": 50
+      },
+      "skip": {
+        "precision": 0.8611,
+        "recall": 0.62,
+        "f1": 0.7209,
+        "support": 50
+      },
+      "macro_f1": 0.7552,
+      "retrieve_recall": 0.9,
+      "skip_rate": 0.36,
+      "confusion_matrix": {
+        "rows_true_cols_pred": [
+          "skip",
+          "retrieve"
+        ],
+        "matrix": [
+          [
+            31,
+            19
+          ],
+          [
+            5,
+            45
+          ]
+        ]
+      }
+    },
+    "confidence_intervals_95": {
+      "accuracy": {
+        "low": 0.67,
+        "high": 0.85,
+        "samples": 1000
+      },
+      "macro_f1": {
+        "low": 0.6656,
+        "high": 0.84,
+        "samples": 1000
+      },
+      "retrieve_recall": {
+        "low": 0.8043,
+        "high": 0.9778,
+        "samples": 1000
+      },
+      "skip_rate": {
+        "low": 0.27,
+        "high": 0.46,
+        "samples": 1000
+      }
+    },
+    "by_source": {
+      "concept_question": {
+        "count": 54,
+        "accuracy": 0.6111,
+        "true_retrieve": 5,
+        "true_skip": 49,
+        "majority_label": "skip",
+        "minority_correct": 2,
+        "minority_total": 5
+      },
+      "plain_chunk": {
+        "count": 46,
+        "accuracy": 0.9348,
+        "true_retrieve": 45,
+        "true_skip": 1,
+        "majority_label": "retrieve",
+        "minority_correct": 0,
+        "minority_total": 1
+      }
+    },
+    "calibration": {
+      "ece_raw": 0.1517,
+      "ece_calibrated": 0.1732,
+      "log_loss_raw": 0.5766,
+      "log_loss_calibrated": 0.6305
+    }
+  }
+}

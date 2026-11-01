@@ -1,0 +1,392 @@
+[
+  {
+    "question": "What methods are proposed to reduce hallucination in large language models?",
+    "answer": "The methods proposed to reduce hallucination in large language models are not explicitly mentioned in the provided context passages.",
+    "contexts": [
+      {
+        "chunk_id": "2609.40295:abstract:0",
+        "title": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+        "score": 0.44427225
+      },
+      {
+        "chunk_id": "2610.01016:abstract:0",
+        "title": "Scaling and Distilling Text Embeddings for Better Diffusibility",
+        "score": 0.4233901
+      },
+      {
+        "chunk_id": "2610.01177:abstract:0",
+        "title": "Temporally-Resolved Token Attribution Reveals the Generation Dynamics of Diffusion Language Models",
+        "score": 0.40795782
+      },
+      {
+        "chunk_id": "2609.40359:abstract:0",
+        "title": "Removing Timing Shortcuts Improves Non-Invasive Brain-to-Text",
+        "score": 0.40264565
+      },
+      {
+        "chunk_id": "2610.01170:abstract:0",
+        "title": "HeadEdit: Calibrating Language Model Behavior Through the Frozen Unembedding Matrix",
+        "score": 0.3998138
+      }
+    ],
+    "latency": 3.640316699980758,
+    "tokens": 1666,
+    "input_tokens": 1644,
+    "output_tokens": 22,
+    "retrieval_latency": 0.027207499981159344,
+    "generation_latency": 3.613109199999599,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "How can retrieval-augmented generation be applied to multi-hop question answering?",
+    "answer": "MatRAG, a hierarchical framework, combines RAG systems with Matryoshka Representation Learning (MRL) to organize the corpus into a DAG of clusters with progressively coarser granularity, indexed by lower Matryoshka dimensions, and uses an iterative, top-down traversal of the DAG with an entity-driven mechanism to control the hop budget and re-rank candidates.",
+    "contexts": [
+      {
+        "chunk_id": "2610.01767:abstract:0",
+        "title": "A Matryoshka Hierarchical RAG for Efficient Multi-Hop Question Answering",
+        "score": 0.6855382
+      },
+      {
+        "chunk_id": "2610.01324:abstract:0",
+        "title": "Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes",
+        "score": 0.5502697
+      },
+      {
+        "chunk_id": "2609.40340:abstract:0",
+        "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+        "score": 0.5071852
+      },
+      {
+        "chunk_id": "2610.00940:abstract:0",
+        "title": "ReHoPER: Receding-Horizon Planning for Enhanced Reasoning",
+        "score": 0.49367568
+      },
+      {
+        "chunk_id": "2610.00606:abstract:0",
+        "title": "Where's Waldo? Query-language Preference under Cross-lingual Knowledge Disparities",
+        "score": 0.4833578
+      }
+    ],
+    "latency": 1.7239743000245653,
+    "tokens": 1490,
+    "input_tokens": 1415,
+    "output_tokens": 75,
+    "retrieval_latency": 0.02657100002397783,
+    "generation_latency": 1.6974033000005875,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "What approaches exist for efficient fine-tuning of language models?",
+    "answer": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer",
+    "contexts": [
+      {
+        "chunk_id": "2610.01170:abstract:0",
+        "title": "HeadEdit: Calibrating Language Model Behavior Through the Frozen Unembedding Matrix",
+        "score": 0.5763585
+      },
+      {
+        "chunk_id": "2610.00540:abstract:0",
+        "title": "Assessing the Impact of Language Disparity on Multilingual Linguistic Ability in Large Language Models",
+        "score": 0.5712394
+      },
+      {
+        "chunk_id": "2610.01592:abstract:0",
+        "title": "Which LLM to pick? Online Active Model Selection for Large Language Models",
+        "score": 0.5696237
+      },
+      {
+        "chunk_id": "2609.40286:abstract:0",
+        "title": "Linguistic Loopholes in LLM Unlearning: From a 174-Language Benchmark to Coverage-Aware Unlearning",
+        "score": 0.56654656
+      },
+      {
+        "chunk_id": "2610.02199:abstract:0",
+        "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+        "score": 0.545076
+      }
+    ],
+    "latency": 0.9615785000205506,
+    "tokens": 1526,
+    "input_tokens": 1509,
+    "output_tokens": 17,
+    "retrieval_latency": 0.02220310000120662,
+    "generation_latency": 0.9393754000193439,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "How are language models evaluated on long-context tasks?",
+    "answer": "The passage does not provide specific information on how language models are evaluated on long-context tasks.",
+    "contexts": [
+      {
+        "chunk_id": "2610.00958:abstract:0",
+        "title": "Role-aware Heuristic Episodic Attention for Conversational LLMs",
+        "score": 0.5899209
+      },
+      {
+        "chunk_id": "2610.00540:abstract:0",
+        "title": "Assessing the Impact of Language Disparity on Multilingual Linguistic Ability in Large Language Models",
+        "score": 0.58373857
+      },
+      {
+        "chunk_id": "2610.00928:abstract:0",
+        "title": "Efficient Task Adaptation in Large Language Models: A Survey of Weight-Based, Prompt-Based, and Embedding-Based Adaptations",
+        "score": 0.5670096
+      },
+      {
+        "chunk_id": "2610.00840:abstract:0",
+        "title": "Contextual trajectory and incremental contextual displacement: Towards using LLMs to understand dynamic, utterance-specific meaning construction",
+        "score": 0.53801477
+      },
+      {
+        "chunk_id": "2610.01491:abstract:0",
+        "title": "Auditing Web Agent Evaluation on WebArena-Lite: Human Review of Outcomes and Trajectories",
+        "score": 0.5227953
+      }
+    ],
+    "latency": 0.9273818000219762,
+    "tokens": 1364,
+    "input_tokens": 1345,
+    "output_tokens": 19,
+    "retrieval_latency": 0.024759699997957796,
+    "generation_latency": 0.9026221000240184,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "What techniques improve the robustness of dense retrieval?",
+    "answer": "No Model Required: Text Entropy Rate Filtering",
+    "contexts": [
+      {
+        "chunk_id": "2610.00923:abstract:0",
+        "title": "CANOPY: Adaptive-Granularity Evidence Compression for Multimodal RAG",
+        "score": 0.54807407
+      },
+      {
+        "chunk_id": "2610.02202:abstract:0",
+        "title": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
+        "score": 0.43499127
+      },
+      {
+        "chunk_id": "2610.01324:abstract:0",
+        "title": "Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes",
+        "score": 0.43496948
+      },
+      {
+        "chunk_id": "2610.01493:abstract:0",
+        "title": "No Model Required: Text Entropy Rate Filtering Mitigates Iterative Fine-Tuning Collapse",
+        "score": 0.42421252
+      },
+      {
+        "chunk_id": "2610.01064:abstract:0",
+        "title": "JoinGR: Learning to Traverse Join Graphs for Table Retrieval",
+        "score": 0.42228007
+      }
+    ],
+    "latency": 0.8631356999685522,
+    "tokens": 1591,
+    "input_tokens": 1581,
+    "output_tokens": 10,
+    "retrieval_latency": 0.024291599984280765,
+    "generation_latency": 0.8388440999842715,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "How is reinforcement learning used to improve language model reasoning?",
+    "answer": "Reinforcement learning with verifiable rewards (RLVR) is used to improve the reasoning capabilities of large language models (LLMs) by optimizing their performance on tasks. This approach allows for the reuse of terminal feedback across decisions, even as their conditioning context changes, through methods like stepwise risk-sensitive GRPO and semifactual credit-augmented policy optimization (SCAPO).",
+    "contexts": [
+      {
+        "chunk_id": "2610.02015:abstract:0",
+        "title": "On Language Drift during RLVR Post-Training",
+        "score": 0.58850724
+      },
+      {
+        "chunk_id": "2610.00661:abstract:0",
+        "title": "Exploring More, Reasoning Better: Stepwise Risk-Sensitive GRPO for Diffusion Language Models",
+        "score": 0.5479636
+      },
+      {
+        "chunk_id": "2609.40360:abstract:0",
+        "title": "Semifactual Credit-Augmented Policy Optimization",
+        "score": 0.5255475
+      },
+      {
+        "chunk_id": "2610.00940:abstract:0",
+        "title": "ReHoPER: Receding-Horizon Planning for Enhanced Reasoning",
+        "score": 0.5255129
+      },
+      {
+        "chunk_id": "2610.00910:abstract:1",
+        "title": "The Geometry of Contextual Relations: Language Models Address Facts by Order of Mention",
+        "score": 0.5125368
+      }
+    ],
+    "latency": 1.6770106999902055,
+    "tokens": 1232,
+    "input_tokens": 1156,
+    "output_tokens": 76,
+    "retrieval_latency": 0.026233999989926815,
+    "generation_latency": 1.6507767000002787,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "What are recent approaches to machine unlearning in language models?",
+    "answer": "Recent approaches to machine unlearning in language models include language budgeted multilingual unlearning, where the goal is to select a subset of languages that maximizes cross-lingual erasure, and COVER, which selects source languages to maximize predicted coverage of languages receiving no forget supervision.",
+    "contexts": [
+      {
+        "chunk_id": "2609.40286:abstract:0",
+        "title": "Linguistic Loopholes in LLM Unlearning: From a 174-Language Benchmark to Coverage-Aware Unlearning",
+        "score": 0.62929344
+      },
+      {
+        "chunk_id": "2609.40295:abstract:0",
+        "title": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+        "score": 0.56189203
+      },
+      {
+        "chunk_id": "2610.00540:abstract:0",
+        "title": "Assessing the Impact of Language Disparity on Multilingual Linguistic Ability in Large Language Models",
+        "score": 0.5499069
+      },
+      {
+        "chunk_id": "2610.02142:abstract:0",
+        "title": "Keyword Harnesses Fail Open: A Cheap Diagnostic Ladder for Tool-Use Claims in Small Language Models",
+        "score": 0.528283
+      },
+      {
+        "chunk_id": "2610.02040:abstract:0",
+        "title": "Typological Alignment of Stack-Based Language Models on Mildly Context-Sensitive Artificial Languages",
+        "score": 0.52313846
+      }
+    ],
+    "latency": 1.6001669999968726,
+    "tokens": 1757,
+    "input_tokens": 1700,
+    "output_tokens": 57,
+    "retrieval_latency": 0.009564699983457103,
+    "generation_latency": 1.5906023000134155,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "How do researchers benchmark retrieval of scientific papers?",
+    "answer": "Researchers benchmark retrieval of scientific papers by having lead authors label which prior work advanced their projects, providing detailed rationales.",
+    "contexts": [
+      {
+        "chunk_id": "2610.02202:abstract:0",
+        "title": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
+        "score": 0.5815196
+      },
+      {
+        "chunk_id": "2609.40340:abstract:0",
+        "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+        "score": 0.44558907
+      },
+      {
+        "chunk_id": "2610.00609:abstract:0",
+        "title": "Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents",
+        "score": 0.44536644
+      },
+      {
+        "chunk_id": "2610.00923:abstract:0",
+        "title": "CANOPY: Adaptive-Granularity Evidence Compression for Multimodal RAG",
+        "score": 0.4137026
+      },
+      {
+        "chunk_id": "2610.01324:abstract:0",
+        "title": "Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes",
+        "score": 0.41168347
+      }
+    ],
+    "latency": 1.1026866000320297,
+    "tokens": 1591,
+    "input_tokens": 1567,
+    "output_tokens": 24,
+    "retrieval_latency": 0.02668090001679957,
+    "generation_latency": 1.07600570001523,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "What methods compress or select evidence for multimodal retrieval-augmented generation?",
+    "answer": "CANOPY, biomedical reranking, GLoC-EHR, MemLife, Encoder-host repair",
+    "contexts": [
+      {
+        "chunk_id": "2610.00923:abstract:0",
+        "title": "CANOPY: Adaptive-Granularity Evidence Compression for Multimodal RAG",
+        "score": 0.63509816
+      },
+      {
+        "chunk_id": "2610.01324:abstract:0",
+        "title": "Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes",
+        "score": 0.52236736
+      },
+      {
+        "chunk_id": "2610.01076:abstract:0",
+        "title": "GLoC-EHR: Evidence-Cited Clinical Reasoning over Global Context and Local EHR Events",
+        "score": 0.48036334
+      },
+      {
+        "chunk_id": "2609.40195:abstract:0",
+        "title": "MemLife: Curating and Reasoning over Long-Term Egocentric Video Memories",
+        "score": 0.47763443
+      },
+      {
+        "chunk_id": "2610.01270:abstract:0",
+        "title": "Not All Is Lost: Repairing Lossy User Preference States of Personalization Encoders",
+        "score": 0.45048177
+      }
+    ],
+    "latency": 1.0578126999898814,
+    "tokens": 1552,
+    "input_tokens": 1532,
+    "output_tokens": 20,
+    "retrieval_latency": 0.02600789998541586,
+    "generation_latency": 1.0318048000044655,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  },
+  {
+    "question": "What is the capital of France?",
+    "answer": "Cannot find in the context.",
+    "contexts": [
+      {
+        "chunk_id": "2610.00727:abstract:0",
+        "title": "CF-JEPA: Improving Robustness of JEPA World Models via Controllability Factorization",
+        "score": 0.120692715
+      },
+      {
+        "chunk_id": "2610.01967:abstract:0",
+        "title": "FastCI: Efficient GPU-Intensive CI for LLM Training Frameworks",
+        "score": 0.11694682
+      },
+      {
+        "chunk_id": "2610.01127:abstract:1",
+        "title": "Counting and Min-Cost Encoding for Tokenization in Large Language Models",
+        "score": 0.112719536
+      },
+      {
+        "chunk_id": "2610.00499:abstract:0",
+        "title": "Denoising Surface: Modeling and Predicting Inference Cost for Diffusion LLM Serving",
+        "score": 0.10394157
+      },
+      {
+        "chunk_id": "2610.01959:abstract:0",
+        "title": "Training-Free Diffusion Planning with Analytical Local Scores",
+        "score": 0.10163047
+      }
+    ],
+    "latency": 0.7154661999666132,
+    "tokens": 1252,
+    "input_tokens": 1245,
+    "output_tokens": 7,
+    "retrieval_latency": 0.024681499984581023,
+    "generation_latency": 0.6907846999820322,
+    "model_id": "qwen2.5:3b-instruct",
+    "cached": true
+  }
+]

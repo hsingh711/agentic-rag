@@ -1,0 +1,54 @@
+{
+  "exact": {
+    "engine": "faiss_flat_ip",
+    "n_vectors": 528,
+    "build_seconds": 0.0012024999596178532,
+    "recall_at_k": 1.0,
+    "mean_ms": 0.023735000286251307,
+    "p50_ms": 0.022200169041752815,
+    "p90_ms": 0.024700071662664413,
+    "p99_ms": 0.025799963623285294
+  },
+  "approximate": {
+    "fp32@ef64": {
+      "collection": "papers_fp32",
+      "quantization": "none",
+      "hnsw_ef": 64,
+      "disk_mb": 276.814491,
+      "recall_at_k": 1.0,
+      "ids_found": 200,
+      "ids_expected": 200,
+      "mean_ms": 13.704754994250834,
+      "p50_ms": 14.892000006511807,
+      "p90_ms": 15.432399930432439,
+      "p99_ms": 16.175700118765235
+    },
+    "int8@ef64": {
+      "collection": "papers_int8",
+      "quantization": "int8",
+      "hnsw_ef": 64,
+      "disk_mb": 277.021313,
+      "recall_at_k": 0.99,
+      "ids_found": 198,
+      "ids_expected": 200,
+      "mean_ms": 12.65203501097858,
+      "p50_ms": 14.625800075009465,
+      "p90_ms": 15.958300093188882,
+      "p99_ms": 18.635799875482917
+    }
+  },
+  "settings": {
+    "corpus": "dev",
+    "n_vectors": 528,
+    "n_queries": 20,
+    "top_k": 10,
+    "ef_search": [
+      64
+    ],
+    "repeats": 2,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "hnsw_m": 16,
+    "hnsw_ef_construct": 100
+  },
+  "table": "| configuration | recall@10 | mean ms | p50 ms | p90 ms | p99 ms | disk MB |\n|---|---|---|---|---|---|---|\n| FAISS flat (exact, 528 vectors) | 1.000 | 0.02 | 0.02 | 0.02 | 0.03 | - |\n| fp32@ef64 | 1.000 | 13.70 | 14.89 | 15.43 | 16.18 | 277 |\n| int8@ef64 | 0.990 | 12.65 | 14.63 | 15.96 | 18.64 | 277 |"
+}

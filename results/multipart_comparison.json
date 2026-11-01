@@ -1,0 +1,637 @@
+{
+  "summary": {
+    "single": {
+      "parts_correct": 35,
+      "parts_total": 40,
+      "both_correct": 15
+    },
+    "per_part": {
+      "parts_correct": 33,
+      "parts_total": 40,
+      "both_correct": 14
+    }
+  },
+  "decomposed": 20,
+  "records": [
+    {
+      "question": "What is the name of the autoregressive protein language model trained on IDiom-DB, and at which university was the HPC site profile built alongside Purdue Anvil and TACC Stampede3?",
+      "parts": [
+        "What is the name of the autoregressive protein language model trained on IDiom-DB?",
+        "At which university was the HPC site profile built alongside Purdue Anvil and TACC Stampede3?"
+      ],
+      "references": [
+        [
+          "IDiom"
+        ],
+        [
+          "Notre Dame CRC"
+        ]
+      ],
+      "single": {
+        "answer": "IDiom; not specified at which university",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What is the name of the autoregressive protein language model trained on IDiom-DB? -> IDiom [2610.02189:abstract:0]\n2) At which university was the HPC site profile built alongside Purdue Anvil and TACC Stampede3? -> not found in the retrieved papers",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What is the name of the preference-conditioned multi-objective reinforcement learning approach for quadrupedal robots, and what type of surrogate does SLIM construct to represent aggregate performance?",
+      "parts": [
+        "What is the name of the preference-conditioned multi-objective reinforcement learning approach for quadrupedal robots?",
+        "What type of surrogate does SLIM construct to represent aggregate performance?"
+      ],
+      "references": [
+        [
+          "PROMO"
+        ],
+        [
+          "quadratic surrogate"
+        ]
+      ],
+      "single": {
+        "answer": "PROMO constructs a surrogate to represent aggregate performance.",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) preference-conditioned multi-objective reinforcement learning approach for quadrupedal robots -> PROMO [2610.01260:abstract:0]\n2) what type of surrogate does SLIM construct to represent aggregate performance -> Simplex-Lattice Interpolation Merging (SLIM) constructs a quadratic surrogate of aggregate performance on the coefficient simplex.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "How many answers were used to certify the curve in the MMLU-Pro study, and what is the specific percentage increase in strong attack success on OrganAMNIST when reducing Poincare curvature to c=0.1?",
+      "parts": [
+        "How many answers were used to certify the curve in the MMLU-Pro study?",
+        "What is the specific percentage increase in strong attack success on OrganAMNIST when reducing Poincare curvature to c=0.1?"
+      ],
+      "references": [
+        [
+          "79,133"
+        ],
+        [
+          "9.57"
+        ]
+      ],
+      "single": {
+        "answer": "79,133 answers were used to certify the curve in the MMLU-Pro study. The strong attack success on OrganAMNIST increased by 9.57 points when reducing Poincare curvature to c=0.1.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) How many answers were used to certify the curve in the MMLU-Pro study? -> 79,133 [2609.40190:abstract:1] [2609.40190:abstract:0]\n2) What is the percentage increase in strong attack success on OrganAMNIST when reducing Poincare curvature to c=0.1? -> 9.57 [2610.00680:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "How many multiple-choice questions were generated for the DOID ontology, and what was the Jaccard similarity percentage between the errors found by the two reviewer models?",
+      "parts": [
+        "How many multiple-choice questions were generated for the DOID ontology?",
+        "What was the Jaccard similarity percentage between the errors found by the two reviewer models?"
+      ],
+      "references": [
+        [
+          "15,216"
+        ],
+        [
+          "41.2%"
+        ]
+      ],
+      "single": {
+        "answer": "15,216\n41.2%",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) How many multiple-choice questions were generated for the DOID ontology? -> 15216 [2610.00682:abstract:0]\n2) What was the Jaccard similarity percentage between the errors found by the two reviewer models for the DOID ontology? -> 41.2% [2610.01471:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What proxies does the hydrologic forecasting framework learn from boundary and interior nodes to compensate for missing boundary forcing, and what is the name of the fault-tolerant training system that enables efficient in-place recovery?",
+      "parts": [
+        "What proxies does the hydrologic forecasting framework learn from boundary and interior nodes to compensate for missing boundary forcing?",
+        "What is the name of the fault-tolerant training system that enables efficient in-place recovery?"
+      ],
+      "references": [
+        [
+          "ghost node proxies"
+        ],
+        [
+          "Leto"
+        ]
+      ],
+      "single": {
+        "answer": "The hydrologic forecasting framework learns ghost node proxies from the boundary and interior nodes to approximate unobserved external inputs. The fault-tolerant training system mentioned is not explicitly named in the context.",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What proxies does the hydrologic forecasting framework learn from boundary and interior nodes to compensate for missing boundary forcing? -> ghost node proxies [2610.01765:abstract:0]\n2) What is the name of the fault-tolerant training system that enables efficient in-place recovery in the hydrologic forecasting framework? -> not found in the retrieved papers",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What specific task is used to test the Bayesian decision-making capabilities of the language models, and what does PMosFM use at inference time to generate physical fields?",
+      "parts": [
+        "What specific task is used to test the Bayesian decision-making capabilities of the language models?",
+        "What does PMosFM use at inference time to generate physical fields?"
+      ],
+      "references": [
+        [
+          "flight recommendation task"
+        ],
+        [
+          "one neural transport evaluation"
+        ]
+      ],
+      "single": {
+        "answer": "The specific task used to test the Bayesian decision-making capabilities of the language models is a flight recommendation task. At inference time, PMosFM uses one neural transport evaluation followed by physical decoding to generate physical fields.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What specific task is used to test the Bayesian decision-making capabilities of language models? -> flight recommendation task [2610.00679:abstract:0]\n2) What does PMosFM use at inference time to generate physical fields? -> one neural transport evaluation followed by physical decoding [2609.40287:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What distribution are the independent weights taken to be in the analysis of the randomly reweighted NPMLE, and what regret and cumulative constraint violation does the best previous algorithm achieve for adversarial linear CMDPs?",
+      "parts": [
+        "What distribution are the independent weights taken to be in the analysis of the randomly reweighted NPMLE?",
+        "What regret and cumulative constraint violation does the best previous algorithm achieve for adversarial linear CMDPs?"
+      ],
+      "references": [
+        [
+          "Gamma"
+        ],
+        [
+          "\\widetilde{\\mathcal{O}}(K^{3/4})"
+        ]
+      ],
+      "single": {
+        "answer": "The independent weights are taken to be Gamma in the analysis. The best previous algorithm for adversarial linear CMDPs achieves $\\widetilde{\\mathcal{O}}(K^{3/4})$ regret and cumulative constraint violation.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What distribution are the independent weights taken to be in the analysis of the randomly reweighted NPMLE? -> Gamma [2610.01088:abstract:0]\n2) What regret and cumulative constraint violation does the best previous algorithm achieve for adversarial linear CMDPs? -> $\\widetilde{\\mathcal{O}}(K^{3/4})$ [2610.00927:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "Which base algorithm does RAPO separate into bootstrap and execution actors, and what two complementary tools are used in the analysis of Wasserstein gradient flows and forward-only diffusion samplers?",
+      "parts": [
+        "Which base algorithm does RAPO separate into bootstrap and execution actors?",
+        "What two complementary tools are used in the analysis of Wasserstein gradient flows and forward-only diffusion samplers?"
+      ],
+      "references": [
+        [
+          "TD3+BC"
+        ],
+        [
+          "spectral analysis and mean first-passage time (MFPT) analysis"
+        ]
+      ],
+      "single": {
+        "answer": "RAPO separates TD3+BC into bootstrap and execution actors.\n\nFor Wasserstein gradient flows and forward-only diffusion samplers, the two complementary tools used in the analysis are spectral analysis and mean first-passage time (MFPT) analysis.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) Which base algorithm does RAPO separate into bootstrap and execution actors? -> TD3+BC [2609.40149:abstract:0]\n2) What two complementary tools are used in the analysis of Wasserstein gradient flows and forward-only diffusion samplers? -> Spectral analysis and mean first-passage time (MFPT) analysis [2610.02081:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What design rule requires that visual evidence be necessary for a correct answer, and what transfer pattern between memorization tasks means each additional pre-training epoch saves approximately one downstream fine-tuning epoch?",
+      "parts": [
+        "What design rule requires that visual evidence be necessary for a correct answer?",
+        "What transfer pattern between memorization tasks means each additional pre-training epoch saves approximately one downstream fine-tuning epoch?"
+      ],
+      "references": [
+        [
+          "visual resolvability"
+        ],
+        [
+          "equivalent transfer"
+        ]
+      ],
+      "single": {
+        "answer": "Design rule: Visual resolvability\nTransfer pattern: Equivalent transfer",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What design rule requires that visual evidence be necessary for a correct answer? -> visual resolvability [2610.01908:abstract:0]\n2) What transfer pattern between memorization tasks means each additional pre-training epoch saves approximately one downstream fine-tuning epoch? -> equivalent transfer [2610.00771:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "In 'Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization', what type of loss explicitly supervises the semantic compressor to preserve linguistic information, and what components are used in the cloud-fog-edge architecture proposed for the smart building system?",
+      "parts": [
+        "In 'Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization', what type of loss explicitly supervises the semantic compressor to preserve linguistic information?",
+        "What components are used in the cloud-fog-edge architecture proposed for the smart building system?"
+      ],
+      "references": [
+        [
+          "autoregressive text loss"
+        ],
+        [
+          "KOptim and FIWARE"
+        ]
+      ],
+      "single": {
+        "answer": "The autoregressive text loss explicitly supervises the semantic compressor.\n\nFor the cloud-fog-edge architecture, the components used are a lightweight orchestration framework, AI services, and a methodology for coupling cloud-fog-edge components.",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What type of loss supervises the semantic compressor in 'Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization'? -> autoregressive text [2610.01492:abstract:0]\n2) What components are used in the cloud-fog-edge architecture proposed for the smart building system? -> KOptim, FIWARE [2610.01647:abstract:0]",
+        "parts_correct": [
+          0,
+          0
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "How many learned layers does the Random Recursive Model maintain in its pool, and what syntactic minimal-pair benchmark covering 101 languages is used to evaluate models in Assessing the Impact of Language Disparity on Multilingual Linguistic Ability in Large Language Models?",
+      "parts": [
+        "How many learned layers does the Random Recursive Model maintain in its pool?",
+        "What syntactic minimal-pair benchmark covering 101 languages is used to evaluate models in Assessing the Impact of Language Disparity on Multilingual Linguistic Ability in Large Language Models?"
+      ],
+      "references": [
+        [
+          "L"
+        ],
+        [
+          "MultiBLiMP"
+        ]
+      ],
+      "single": {
+        "answer": "The Random Recursive Model maintains a pool of L learned layers. The syntactic minimal-pair benchmark covering 101 languages used to evaluate models in Assessing the Impact of Language Disparity on Multilingual Linguistic Ability in Large Language Models is MultiBLiMP.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) How many learned layers does the Random Recursive Model maintain in its pool? -> L [2610.00541:abstract:0]\n2) What syntactic minimal-pair benchmark covering 101 languages is used in Assessing the Impact of Language Disparity on Multilingual Linguistic Ability in Large Language Models? -> MultiBLiMP [2610.00540:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What is the name of the 83B-token corpus released by the researchers, and which technique is used to select diverse concepts for debiasing?",
+      "parts": [
+        "What is the name of the 83B-token corpus released by the researchers?",
+        "Which technique is used to select diverse concepts for debiasing?"
+      ],
+      "references": [
+        [
+          "WildAI"
+        ],
+        [
+          "maximal marginal relevance"
+        ]
+      ],
+      "single": {
+        "answer": "The name of the 83B-token corpus is WildAI. It uses maximal marginal relevance (MMR) to select diverse concepts for debiasing.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What is the name of the 83B-token corpus released by researchers? -> WildAI [2609.40295:abstract:1]\n2) What technique is used to select diverse concepts for debiasing in the 83B-token corpus research? -> MMR [2610.01696:abstract:0]",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "Which Transformer-based large language model is explicitly mentioned as representing text using contextual word embeddings in Contextual trajectory and incremental contextual displacement, and how many Western Australian drillholes are included in the DrillBench benchmark?",
+      "parts": [
+        "Which Transformer-based large language model is explicitly mentioned as representing text using contextual word embeddings in Contextual trajectory and incremental contextual displacement?",
+        "How many Western Australian drillholes are included in the DrillBench benchmark?"
+      ],
+      "references": [
+        [
+          "RoBERTa"
+        ],
+        [
+          "49,671"
+        ]
+      ],
+      "single": {
+        "answer": "Transformer-based large language model mentioned is RoBERTa. DrillBench benchmark includes 49,671 Western Australian drillholes.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) Which Transformer-based large language model is mentioned as representing text using contextual word embeddings in Contextual trajectory and incremental contextual displacement? -> RoBERTa [2610.00840:abstract:0]\n2) How many Western Australian drillholes are included in the DrillBench benchmark? -> 49671 [2610.01204:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What is the name of the first de-identified Thai clinical summarization benchmark of real encounters released in the ASCRIBE paper, and what kind of objective is used to reformulate discrete trellis path optimization in XOR-Trellis?",
+      "parts": [
+        "What is the name of the first de-identified Thai clinical summarization benchmark of real encounters released in the ASCRIBE paper?",
+        "What kind of objective is used to reformulate discrete trellis path optimization in XOR-Trellis?"
+      ],
+      "references": [
+        [
+          "ThaiClinicBench"
+        ],
+        [
+          "a curvature-aware objective"
+        ]
+      ],
+      "single": {
+        "answer": "The first de-identified Thai clinical summarization benchmark of real encounters released in the ASCRIBE paper is ThaiClinicBench.\n\nIn XOR-Trellis, discrete trellis path optimization is reformulated with a curvature-aware objective.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What is the name of the first de-identified Thai clinical summarization benchmark of real encounters released in the ASCRIBE paper? -> ThaiClinicBench [2610.01234:abstract:0]\n2) What kind of objective is used to reformulate discrete trellis path optimization in XOR-Trellis? -> curvature-aware [2610.00432:abstract:0]",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What setting does the analysis framework predict does not always produce grokking under a symmetry-preserving train/validation split, and what kind of attachment forecasts are used with nonnegative degree reinforcement in the study of growing trees?",
+      "parts": [
+        "What setting does the analysis framework predict does not always produce grokking under a symmetry-preserving train/validation split?",
+        "What kind of attachment forecasts are used with nonnegative degree reinforcement in the study of growing trees?"
+      ],
+      "references": [
+        [
+          "standard modular-arithmetic setting"
+        ],
+        [
+          "deterministic affine attachment forecasts"
+        ]
+      ],
+      "single": {
+        "answer": "The analysis framework predicts that the standard modular-arithmetic setting does not always produce grokking under a symmetry-preserving train/validation split. For the study of growing trees, deterministic affine attachment forecasts with nonnegative degree reinforcement are used.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What setting does the analysis framework predict does not always produce grokking under a symmetry-preserving train/validation split? -> standard modular-arithmetic setting [2610.00620:abstract:0]\n2) What kind of attachment forecasts are used with nonnegative degree reinforcement in the study of growing trees? -> uniform-preferential attachment [2609.40077:abstract:0]",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What is the name of the method that models the evolving curriculum as a non-stationary bandit, and what does cua-speedrun use to ensure a uniform execution pipeline across different benchmarks?",
+      "parts": [
+        "What is the name of the method that models the evolving curriculum as a non-stationary bandit?",
+        "What does cua-speedrun use to ensure a uniform execution pipeline across different benchmarks?"
+      ],
+      "references": [
+        [
+          "ActiveSaddler"
+        ],
+        [
+          "virtual machine setup"
+        ]
+      ],
+      "single": {
+        "answer": "ActiveSaddler\ncua-speedrun uses a uniform virtual machine setup and execution pipeline",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What method models the evolving curriculum as a non-stationary bandit? -> ActiveSaddler [2610.00906:abstract:0]\n2) What does cua-speedrun use to ensure a uniform execution pipeline across different benchmarks? -> virtual machine setup [2609.40284:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What mathematical structures are used to instantiate higher-order positional encodings, and what is the Macro-F1 score achieved by SCOPE-AD on ADNI?",
+      "parts": [
+        "What mathematical structures are used to instantiate higher-order positional encodings?",
+        "What is the Macro-F1 score achieved by SCOPE-AD on ADNI?"
+      ],
+      "references": [
+        [
+          "Hodge Laplacians"
+        ],
+        [
+          "77.70\\%"
+        ]
+      ],
+      "single": {
+        "answer": "Mathematical structures used are Hodge Laplacians derived from clique complexes. The Macro-F1 score achieved by SCOPE-AD on ADNI is 77.70\\%.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) mathematical structures used to instantiate higher-order positional encodings -> Hodge Laplacians [2610.01903:abstract:0]\n2) Macro-F1 score achieved by SCOPE-AD on ADNI -> 77.70 [2610.01278:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "How many frozen scenes from six generators are audited in the evaluation of rendered-image text-to-3D evaluation, and what operator do the authors use to study a recurrent network's global first-order perturbation response?",
+      "parts": [
+        "How many frozen scenes from six generators are audited in the evaluation of rendered-image text-to-3D evaluation?",
+        "What operator do the authors use to study a recurrent network's global first-order perturbation response?"
+      ],
+      "references": [
+        [
+          "300"
+        ],
+        [
+          "Green's operator"
+        ]
+      ],
+      "single": {
+        "answer": "300 frozen scenes are audited. The authors use the Green's operator.",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) How many frozen scenes from six generators are audited in the evaluation of rendered-image text-to-3D evaluation? -> 300 [2610.00447:abstract:0]\n2) What operator do the authors use to study a recurrent network's global first-order perturbation response? -> Green's Operator [2609.40292:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What is the name of the simple recipe that processes windows independently to prevent the neural network from learning timing shortcuts, and what is the name of the framework introduced to identify regime-specific latent timescales from neural observations?",
+      "parts": [
+        "What is the name of the simple recipe that processes windows independently to prevent the neural network from learning timing shortcuts?",
+        "What is the name of the framework introduced to identify regime-specific latent timescales from neural observations?"
+      ],
+      "references": [
+        [
+          "SimpleB2T"
+        ],
+        [
+          "Multi-Timescale Switching Linear Dynamical System"
+        ]
+      ],
+      "single": {
+        "answer": "SimpleB2T, MTS-SLDS",
+        "parts_correct": [
+          1,
+          0
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What is the simple recipe that processes windows independently to prevent the neural network from learning timing shortcuts? -> SimpleB2T [2609.40359:abstract:0]\n2) What is the framework introduced to identify regime-specific latent timescales from neural observations? -> Multi-Timescale Switching Linear Dynamical System (MTS-SLDS) [2610.01786:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    },
+    {
+      "question": "What is the name of the approach that introduces a latent distribution to enable probabilistic forecasting in streaming flow, and what dataset was used to evaluate the ten-pass Looped Audio Spectrogram Transformer, achieving 0.345 mean average precision?",
+      "parts": [
+        "What is the name of the approach that introduces a latent distribution to enable probabilistic forecasting in streaming flow?",
+        "What dataset was used to evaluate the ten-pass Looped Audio Spectrogram Transformer, achieving 0.345 mean average precision?"
+      ],
+      "references": [
+        [
+          "Variational Streaming Flow"
+        ],
+        [
+          "AudioSet"
+        ]
+      ],
+      "single": {
+        "answer": "Variational Streaming Flow; AudioSet",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      },
+      "per_part": {
+        "answer": "1) What is the name of the approach that introduces a latent distribution to enable probabilistic forecasting in streaming flow? -> Variational Streaming Flow (VSF) [2610.00976:abstract:0]\n2) What dataset was used to evaluate the ten-pass Looped Audio Spectrogram Transformer to achieve 0.345 mean average precision? -> AudioSet [2610.01926:abstract:0]",
+        "parts_correct": [
+          1,
+          1
+        ],
+        "first_mode": "decompose"
+      }
+    }
+  ]
+}

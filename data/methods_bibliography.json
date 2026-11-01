@@ -1,0 +1,822 @@
+{
+  "description": "The literature and software this project's method rests on, one entry per work, each mapped to the block or component that uses it. Hand-curated: it is the project's reading list, not the corpus the system retrieves from.",
+  "arxiv_metadata_verified": "2026-10-31",
+  "verification_note": "Every arXiv entry's title, year and author list was fetched from the arXiv API on that date rather than typed from memory. The four non-arXiv works and the four libraries are hand-entered and carry 'source': 'hand-entered'.",
+  "entries": [
+    {
+      "area": "Foundations",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "year": 2018,
+      "authors": [
+        "Jacob Devlin",
+        "Ming-Wei Chang",
+        "Kenton Lee",
+        "Kristina Toutanova"
+      ],
+      "reference": "arXiv:1810.04805",
+      "arxiv_id": "1810.04805",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "used_for": "BERT: the pretraining recipe behind both the block 1 classifier and the block 6 NLI model.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Foundations",
+      "title": "Attention Is All You Need",
+      "year": 2017,
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "reference": "arXiv:1706.03762",
+      "arxiv_id": "1706.03762",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "used_for": "The Transformer architecture underneath every model in the stack.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Foundations",
+      "title": "Distilling the Knowledge in a Neural Network",
+      "year": 2015,
+      "authors": [
+        "Geoffrey Hinton",
+        "Oriol Vinyals",
+        "Jeff Dean"
+      ],
+      "reference": "arXiv:1503.02531",
+      "arxiv_id": "1503.02531",
+      "url": "https://arxiv.org/abs/1503.02531",
+      "used_for": "Knowledge distillation: why a 66M distilled classifier is enough for block 1.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Retrieval-augmented generation",
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "year": 2020,
+      "authors": [
+        "Vladimir Karpukhin",
+        "Barlas Oğuz",
+        "Sewon Min",
+        "Patrick Lewis",
+        "Ledell Wu",
+        "Sergey Edunov",
+        "Danqi Chen",
+        "Wen-tau Yih"
+      ],
+      "reference": "arXiv:2004.04906",
+      "arxiv_id": "2004.04906",
+      "url": "https://arxiv.org/abs/2004.04906",
+      "used_for": "Dense passage retrieval: the dense-only retrieval the graph uses by default.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Retrieval-augmented generation",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "year": 2020,
+      "authors": [
+        "Patrick Lewis",
+        "Ethan Perez",
+        "Aleksandra Piktus",
+        "Fabio Petroni",
+        "Vladimir Karpukhin",
+        "Naman Goyal",
+        "Heinrich Küttler",
+        "Mike Lewis",
+        "Wen-tau Yih",
+        "Tim Rocktäschel",
+        "Sebastian Riedel",
+        "Douwe Kiela"
+      ],
+      "reference": "arXiv:2005.11401",
+      "arxiv_id": "2005.11401",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "used_for": "The original RAG formulation this project extends with agency.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 1 - retrieval-necessity classifier",
+      "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity",
+      "year": 2024,
+      "authors": [
+        "Soyeong Jeong",
+        "Jinheon Baek",
+        "Sukmin Cho",
+        "Sung Ju Hwang",
+        "Jong C. Park"
+      ],
+      "reference": "arXiv:2403.14403",
+      "arxiv_id": "2403.14403",
+      "url": "https://arxiv.org/abs/2403.14403",
+      "used_for": "Adaptive-RAG: routing a question by complexity, the same idea as block 1 at a coarser grain.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 1 - retrieval-necessity classifier",
+      "title": "Active Retrieval Augmented Generation",
+      "year": 2023,
+      "authors": [
+        "Zhengbao Jiang",
+        "Frank F. Xu",
+        "Luyu Gao",
+        "Zhiqing Sun",
+        "Qian Liu",
+        "Jane Dwivedi-Yu",
+        "Yiming Yang",
+        "Jamie Callan",
+        "Graham Neubig"
+      ],
+      "reference": "arXiv:2305.06983",
+      "arxiv_id": "2305.06983",
+      "url": "https://arxiv.org/abs/2305.06983",
+      "used_for": "FLARE: the 'active retrieval' in this project's title; decides when retrieval is needed rather than always retrieving.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 1 - retrieval-necessity classifier",
+      "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories",
+      "year": 2022,
+      "authors": [
+        "Alex Mallen",
+        "Akari Asai",
+        "Victor Zhong",
+        "Rajarshi Das",
+        "Daniel Khashabi",
+        "Hannaneh Hajishirzi"
+      ],
+      "reference": "arXiv:2212.10511",
+      "arxiv_id": "2212.10511",
+      "url": "https://arxiv.org/abs/2212.10511",
+      "used_for": "Evidence that always retrieving is not optimal, and that a model's own knowledge should decide.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 1 - retrieval-necessity classifier",
+      "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+      "year": 2019,
+      "authors": [
+        "Victor Sanh",
+        "Lysandre Debut",
+        "Julien Chaumond",
+        "Thomas Wolf"
+      ],
+      "reference": "arXiv:1910.01108",
+      "arxiv_id": "1910.01108",
+      "url": "https://arxiv.org/abs/1910.01108",
+      "used_for": "DistilBERT: the exact base model fine-tuned as the retrieve/skip classifier (distilbert-base-uncased).",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 2 - query reformulation",
+      "title": "Query Rewriting for Retrieval-Augmented Large Language Models",
+      "year": 2023,
+      "authors": [
+        "Xinbei Ma",
+        "Yeyun Gong",
+        "Pengcheng He",
+        "Hai Zhao",
+        "Nan Duan"
+      ],
+      "reference": "arXiv:2305.14283",
+      "arxiv_id": "2305.14283",
+      "url": "https://arxiv.org/abs/2305.14283",
+      "used_for": "Query rewriting for RAG: the rewrite step in block 2.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 2 - query reformulation",
+      "title": "Measuring and Narrowing the Compositionality Gap in Language Models",
+      "year": 2022,
+      "authors": [
+        "Ofir Press",
+        "Muru Zhang",
+        "Sewon Min",
+        "Ludwig Schmidt",
+        "Noah A. Smith",
+        "Mike Lewis"
+      ],
+      "reference": "arXiv:2210.03350",
+      "arxiv_id": "2210.03350",
+      "url": "https://arxiv.org/abs/2210.03350",
+      "used_for": "Self-Ask: the multi-hop decomposition that block 2 performs for compositional questions.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Blocks 3 and 4 - sufficiency critic and retry loop",
+      "title": "Corrective Retrieval Augmented Generation",
+      "year": 2024,
+      "authors": [
+        "Shi-Qi Yan",
+        "Jia-Chen Gu",
+        "Yun Zhu",
+        "Zhen-Hua Ling"
+      ],
+      "reference": "arXiv:2401.15884",
+      "arxiv_id": "2401.15884",
+      "url": "https://arxiv.org/abs/2401.15884",
+      "used_for": "Corrective RAG: judging retrieved evidence and acting on a negative verdict, as the sufficiency critic does.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Blocks 3 and 4 - sufficiency critic and retry loop",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "year": 2023,
+      "authors": [
+        "Noah Shinn",
+        "Federico Cassano",
+        "Edward Berman",
+        "Ashwin Gopinath",
+        "Karthik Narasimhan",
+        "Shunyu Yao"
+      ],
+      "reference": "arXiv:2303.11366",
+      "arxiv_id": "2303.11366",
+      "url": "https://arxiv.org/abs/2303.11366",
+      "used_for": "Reflexion: carrying verbal critic feedback into the next attempt, which is what the retry loop passes to the reformulator.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Blocks 3 and 4 - sufficiency critic and retry loop",
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "year": 2023,
+      "authors": [
+        "Akari Asai",
+        "Zeqiu Wu",
+        "Yizhong Wang",
+        "Avirup Sil",
+        "Hannaneh Hajishirzi"
+      ],
+      "reference": "arXiv:2310.11511",
+      "arxiv_id": "2310.11511",
+      "url": "https://arxiv.org/abs/2310.11511",
+      "used_for": "Self-RAG: the closest prior art to this whole design - retrieve, critique with reflection tokens, generate.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Blocks 3 and 4 - sufficiency critic and retry loop",
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "year": 2023,
+      "authors": [
+        "Aman Madaan",
+        "Niket Tandon",
+        "Prakhar Gupta",
+        "Skyler Hallinan",
+        "Luyu Gao",
+        "Sarah Wiegreffe",
+        "Uri Alon",
+        "Nouha Dziri",
+        "Shrimai Prabhumoye",
+        "Yiming Yang",
+        "Shashank Gupta",
+        "Bodhisattwa Prasad Majumder",
+        "Katherine Hermann",
+        "Sean Welleck",
+        "Amir Yazdanbakhsh",
+        "Peter Clark"
+      ],
+      "reference": "arXiv:2303.17651",
+      "arxiv_id": "2303.17651",
+      "url": "https://arxiv.org/abs/2303.17651",
+      "used_for": "Self-Refine: the iterate-on-own-output loop that block 4 bounds with max_retries.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Blocks 3 and 4 - sufficiency critic and retry loop",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "year": 2022,
+      "authors": [
+        "Shunyu Yao",
+        "Jeffrey Zhao",
+        "Dian Yu",
+        "Nan Du",
+        "Izhak Shafran",
+        "Karthik Narasimhan",
+        "Yuan Cao"
+      ],
+      "reference": "arXiv:2210.03629",
+      "arxiv_id": "2210.03629",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "used_for": "ReAct: interleaving reasoning and acting, the pattern the LangGraph state machine implements.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 5 - grounded generation",
+      "title": "Qwen2.5 Technical Report",
+      "year": 2024,
+      "authors": [
+        "Qwen",
+        ":",
+        "An Yang",
+        "Baosong Yang",
+        "Beichen Zhang",
+        "Binyuan Hui",
+        "Bo Zheng",
+        "Bowen Yu",
+        "Chengyuan Li",
+        "Dayiheng Liu",
+        "Fei Huang",
+        "Haoran Wei",
+        "Huan Lin",
+        "Jian Yang",
+        "Jianhong Tu",
+        "Jianwei Zhang",
+        "Jianxin Yang",
+        "Jiaxi Yang",
+        "Jingren Zhou",
+        "Junyang Lin",
+        "Kai Dang",
+        "Keming Lu",
+        "Keqin Bao",
+        "Kexin Yang",
+        "Le Yu",
+        "Mei Li",
+        "Mingfeng Xue",
+        "Pei Zhang",
+        "Qin Zhu",
+        "Rui Men",
+        "Runji Lin",
+        "Tianhao Li",
+        "Tianyi Tang",
+        "Tingyu Xia",
+        "Xingzhang Ren",
+        "Xuancheng Ren",
+        "Yang Fan",
+        "Yang Su",
+        "Yichang Zhang",
+        "Yu Wan",
+        "Yuqiong Liu",
+        "Zeyu Cui",
+        "Zhenru Zhang",
+        "Zihan Qiu"
+      ],
+      "reference": "arXiv:2412.15115",
+      "arxiv_id": "2412.15115",
+      "url": "https://arxiv.org/abs/2412.15115",
+      "used_for": "Qwen2.5: the local generator, qwen2.5:3b-instruct, served by Ollama.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 5 - grounded generation",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "year": 2023,
+      "authors": [
+        "Nelson F. Liu",
+        "Kevin Lin",
+        "John Hewitt",
+        "Ashwin Paranjape",
+        "Michele Bevilacqua",
+        "Fabio Petroni",
+        "Percy Liang"
+      ],
+      "reference": "arXiv:2307.03172",
+      "arxiv_id": "2307.03172",
+      "url": "https://arxiv.org/abs/2307.03172",
+      "used_for": "Lost in the middle: why the number of contexts shown to the generator is a tunable worth ablating (max_contexts).",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 5 - grounded generation",
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "year": 2022,
+      "authors": [
+        "Jason Wei",
+        "Xuezhi Wang",
+        "Dale Schuurmans",
+        "Maarten Bosma",
+        "Brian Ichter",
+        "Fei Xia",
+        "Ed Chi",
+        "Quoc Le",
+        "Denny Zhou"
+      ],
+      "reference": "arXiv:2201.11903",
+      "arxiv_id": "2201.11903",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "used_for": "Chain-of-thought prompting, which informs the prompt design in src/agents/prompts.py.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 6 - answer verification",
+      "title": "DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing",
+      "year": 2021,
+      "authors": [
+        "Pengcheng He",
+        "Jianfeng Gao",
+        "Weizhu Chen"
+      ],
+      "reference": "arXiv:2111.09543",
+      "arxiv_id": "2111.09543",
+      "url": "https://arxiv.org/abs/2111.09543",
+      "used_for": "DeBERTaV3: the exact variant that verifier model is built on.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 6 - answer verification",
+      "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
+      "year": 2020,
+      "authors": [
+        "Pengcheng He",
+        "Xiaodong Liu",
+        "Jianfeng Gao",
+        "Weizhu Chen"
+      ],
+      "reference": "arXiv:2006.03654",
+      "arxiv_id": "2006.03654",
+      "url": "https://arxiv.org/abs/2006.03654",
+      "used_for": "DeBERTa: the backbone of the verifier model cross-encoder/nli-deberta-v3-base.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 6 - answer verification",
+      "title": "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference",
+      "year": 2017,
+      "authors": [
+        "Adina Williams",
+        "Nikita Nangia",
+        "Samuel R. Bowman"
+      ],
+      "reference": "arXiv:1704.05426",
+      "arxiv_id": "1704.05426",
+      "url": "https://arxiv.org/abs/1704.05426",
+      "used_for": "MultiNLI: the cross-domain half of that training data, which is why the verifier transfers to arXiv text.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Block 6 - answer verification",
+      "title": "A large annotated corpus for learning natural language inference",
+      "year": 2015,
+      "authors": [
+        "Samuel R. Bowman",
+        "Gabor Angeli",
+        "Christopher Potts",
+        "Christopher D. Manning"
+      ],
+      "reference": "arXiv:1508.05326",
+      "arxiv_id": "1508.05326",
+      "url": "https://arxiv.org/abs/1508.05326",
+      "used_for": "SNLI: part of the entailment training data that makes the verifier's labels meaningful.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Embeddings",
+      "title": "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers",
+      "year": 2020,
+      "authors": [
+        "Wenhui Wang",
+        "Furu Wei",
+        "Li Dong",
+        "Hangbo Bao",
+        "Nan Yang",
+        "Ming Zhou"
+      ],
+      "reference": "arXiv:2002.10957",
+      "arxiv_id": "2002.10957",
+      "url": "https://arxiv.org/abs/2002.10957",
+      "used_for": "MiniLM: all-MiniLM-L6-v2, the configured embedding model, is a MiniLM distillation.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Embeddings",
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "year": 2019,
+      "authors": [
+        "Nils Reimers",
+        "Iryna Gurevych"
+      ],
+      "reference": "arXiv:1908.10084",
+      "arxiv_id": "1908.10084",
+      "url": "https://arxiv.org/abs/1908.10084",
+      "used_for": "Sentence-BERT: the bi-encoder design behind the sentence-transformers embedder.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Vector store and ANN search",
+      "title": "The Faiss library",
+      "year": 2024,
+      "authors": [
+        "Matthijs Douze",
+        "Alexandr Guzhva",
+        "Chengqi Deng",
+        "Jeff Johnson",
+        "Gergely Szilvasy",
+        "Pierre-Emmanuel Mazaré",
+        "Maria Lomeli",
+        "Lucas Hosseini",
+        "Hervé Jégou"
+      ],
+      "reference": "arXiv:2401.08281",
+      "arxiv_id": "2401.08281",
+      "url": "https://arxiv.org/abs/2401.08281",
+      "used_for": "The current FAISS library reference for the section 11 benchmark.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Vector store and ANN search",
+      "title": "Billion-scale similarity search with GPUs",
+      "year": 2017,
+      "authors": [
+        "Jeff Johnson",
+        "Matthijs Douze",
+        "Hervé Jégou"
+      ],
+      "reference": "arXiv:1702.08734",
+      "arxiv_id": "1702.08734",
+      "url": "https://arxiv.org/abs/1702.08734",
+      "used_for": "FAISS: the flat exact-search baseline recall is measured against.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Vector store and ANN search",
+      "title": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+      "year": 2016,
+      "authors": [
+        "Yu. A. Malkov",
+        "D. A. Yashunin"
+      ],
+      "reference": "arXiv:1603.09320",
+      "arxiv_id": "1603.09320",
+      "url": "https://arxiv.org/abs/1603.09320",
+      "used_for": "HNSW: the index Qdrant uses, and the algorithm whose ef parameter section 11 sweeps.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Vector store and ANN search",
+      "title": "Product Quantization for Nearest Neighbor Search",
+      "year": 2011,
+      "authors": [
+        "Herve Jegou",
+        "Matthijs Douze",
+        "Cordelia Schmid"
+      ],
+      "reference": "IEEE Transactions on Pattern Analysis and Machine Intelligence 33(1), 117-128",
+      "url": "https://doi.org/10.1109/TPAMI.2010.57",
+      "used_for": "The quantization family behind Qdrant's int8 scalar quantization, benchmarked in section 11.",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    },
+    {
+      "area": "Hybrid retrieval and reranking (built, not used)",
+      "title": "Passage Re-ranking with BERT",
+      "year": 2019,
+      "authors": [
+        "Rodrigo Nogueira",
+        "Kyunghyun Cho"
+      ],
+      "reference": "arXiv:1901.04085",
+      "arxiv_id": "1901.04085",
+      "url": "https://arxiv.org/abs/1901.04085",
+      "used_for": "Cross-encoder passage reranking, as implemented in src/index/hybrid.py.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Hybrid retrieval and reranking (built, not used)",
+      "title": "MS MARCO: A Human Generated MAchine Reading COmprehension Dataset",
+      "year": 2016,
+      "authors": [
+        "Payal Bajaj",
+        "Daniel Campos",
+        "Nick Craswell",
+        "Li Deng",
+        "Jianfeng Gao",
+        "Xiaodong Liu",
+        "Rangan Majumder",
+        "Andrew McNamara",
+        "Bhaskar Mitra",
+        "Tri Nguyen",
+        "Mir Rosenberg",
+        "Xia Song",
+        "Alina Stoica",
+        "Saurabh Tiwary",
+        "Tong Wang"
+      ],
+      "reference": "arXiv:1611.09268",
+      "arxiv_id": "1611.09268",
+      "url": "https://arxiv.org/abs/1611.09268",
+      "used_for": "MS MARCO: the training data of the configured reranker, cross-encoder/ms-marco-MiniLM-L-6-v2.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Hybrid retrieval and reranking (built, not used)",
+      "title": "Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods",
+      "year": 2009,
+      "authors": [
+        "Gordon V. Cormack",
+        "Charles L. A. Clarke",
+        "Stefan Buettcher"
+      ],
+      "reference": "SIGIR 2009, 758-759",
+      "url": "https://doi.org/10.1145/1571941.1572114",
+      "used_for": "Reciprocal rank fusion, how the dense and BM25 result lists are combined in src/index/hybrid.py.",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    },
+    {
+      "area": "Hybrid retrieval and reranking (built, not used)",
+      "title": "The Probabilistic Relevance Framework: BM25 and Beyond",
+      "year": 2009,
+      "authors": [
+        "Stephen Robertson",
+        "Hugo Zaragoza"
+      ],
+      "reference": "Foundations and Trends in Information Retrieval 3(4), 333-389",
+      "url": "https://doi.org/10.1561/1500000019",
+      "used_for": "BM25, the lexical half of hybrid retrieval; the configured k1 = 1.5 and b = 0.75 are this framework's parameters.",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    },
+    {
+      "area": "Evaluation",
+      "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+      "year": 2023,
+      "authors": [
+        "Lianmin Zheng",
+        "Wei-Lin Chiang",
+        "Ying Sheng",
+        "Siyuan Zhuang",
+        "Zhanghao Wu",
+        "Yonghao Zhuang",
+        "Zi Lin",
+        "Zhuohan Li",
+        "Dacheng Li",
+        "Eric P. Xing",
+        "Hao Zhang",
+        "Joseph E. Gonzalez",
+        "Ion Stoica"
+      ],
+      "reference": "arXiv:2306.05685",
+      "arxiv_id": "2306.05685",
+      "url": "https://arxiv.org/abs/2306.05685",
+      "used_for": "LLM-as-a-judge: the pattern the sufficiency critic and the RAGAS judge both rely on, and its known biases.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Evaluation",
+      "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+      "year": 2023,
+      "authors": [
+        "Shahul Es",
+        "Jithin James",
+        "Luis Espinosa-Anke",
+        "Steven Schockaert"
+      ],
+      "reference": "arXiv:2309.15217",
+      "arxiv_id": "2309.15217",
+      "url": "https://arxiv.org/abs/2309.15217",
+      "used_for": "RAGAS: the faithfulness and answer-relevancy metrics reported in section 10.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Evaluation",
+      "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+      "year": 2016,
+      "authors": [
+        "Pranav Rajpurkar",
+        "Jian Zhang",
+        "Konstantin Lopyrev",
+        "Percy Liang"
+      ],
+      "reference": "arXiv:1606.05250",
+      "arxiv_id": "1606.05250",
+      "url": "https://arxiv.org/abs/1606.05250",
+      "used_for": "SQuAD: the token-F1 scoring that relaxed accuracy uses for its F1 >= 0.8 criterion.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Evaluation",
+      "title": "An Introduction to the Bootstrap",
+      "year": 1993,
+      "authors": [
+        "Bradley Efron",
+        "Robert J. Tibshirani"
+      ],
+      "reference": "Chapman & Hall (book)",
+      "url": "",
+      "used_for": "The 95% bootstrap confidence intervals on every accuracy number and every paired ablation difference.",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    },
+    {
+      "area": "Evaluation datasets",
+      "title": "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries",
+      "year": 2024,
+      "authors": [
+        "Yixuan Tang",
+        "Yi Yang"
+      ],
+      "reference": "arXiv:2401.15391",
+      "arxiv_id": "2401.15391",
+      "url": "https://arxiv.org/abs/2401.15391",
+      "used_for": "MultiHop-RAG: the multi-hop and null-question evaluation set; the source of the abstention numbers.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Evaluation datasets",
+      "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+      "year": 2018,
+      "authors": [
+        "Zhilin Yang",
+        "Peng Qi",
+        "Saizheng Zhang",
+        "Yoshua Bengio",
+        "William W. Cohen",
+        "Ruslan Salakhutdinov",
+        "Christopher D. Manning"
+      ],
+      "reference": "arXiv:1809.09600",
+      "arxiv_id": "1809.09600",
+      "url": "https://arxiv.org/abs/1809.09600",
+      "used_for": "HotpotQA (distractor, validation): the multi-hop evaluation set, in its own Qdrant collection.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Software and libraries",
+      "title": "HuggingFace's Transformers: State-of-the-art Natural Language Processing",
+      "year": 2019,
+      "authors": [
+        "Thomas Wolf",
+        "Lysandre Debut",
+        "Victor Sanh",
+        "Julien Chaumond",
+        "Clement Delangue",
+        "Anthony Moi",
+        "Pierric Cistac",
+        "Tim Rault",
+        "Rémi Louf",
+        "Morgan Funtowicz",
+        "Joe Davison",
+        "Sam Shleifer",
+        "Patrick von Platen",
+        "Clara Ma",
+        "Yacine Jernite",
+        "Julien Plu",
+        "Canwen Xu",
+        "Teven Le Scao",
+        "Sylvain Gugger",
+        "Mariama Drame",
+        "Quentin Lhoest",
+        "Alexander M. Rush"
+      ],
+      "reference": "arXiv:1910.03771",
+      "arxiv_id": "1910.03771",
+      "url": "https://arxiv.org/abs/1910.03771",
+      "used_for": "Hugging Face Transformers: the Trainer used to fine-tune the block 1 classifier.",
+      "source": "arXiv API"
+    },
+    {
+      "area": "Software and libraries",
+      "title": "LangGraph",
+      "authors": [
+        "LangChain, Inc."
+      ],
+      "reference": "Software, no paper",
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "used_for": "The StateGraph that wires blocks 1-6 together and bounds the retry loop.",
+      "year": "",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    },
+    {
+      "area": "Software and libraries",
+      "title": "Ollama",
+      "authors": [
+        "Ollama"
+      ],
+      "reference": "Software, no paper",
+      "url": "https://ollama.com",
+      "used_for": "Serves the local generator, which is what keeps generation free.",
+      "year": "",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    },
+    {
+      "area": "Software and libraries",
+      "title": "Qdrant",
+      "authors": [
+        "Qdrant Solutions GmbH"
+      ],
+      "reference": "Software, no paper",
+      "url": "https://qdrant.tech/documentation/",
+      "used_for": "The vector database: HNSW index, int8 scalar quantization, gRPC transport.",
+      "year": "",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    },
+    {
+      "area": "Software and libraries",
+      "title": "Streamlit",
+      "authors": [
+        "Snowflake Inc."
+      ],
+      "reference": "Software, no paper",
+      "url": "https://docs.streamlit.io",
+      "used_for": "The demo application in app/.",
+      "year": "",
+      "arxiv_id": "",
+      "source": "hand-entered"
+    }
+  ]
+}

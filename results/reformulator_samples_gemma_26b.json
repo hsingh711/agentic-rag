@@ -1,0 +1,42 @@
+[
+  {
+    "input": {
+      "question": "Liz Rose has co-written songs with which artist including \"White Horse\" and \"You Belong with Me\"?",
+      "answer": "Taylor Swift",
+      "type": "bridge",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "Liz Rose has co-written songs with which artist including \"White Horse\" and \"You Belong with Me\"?"
+      ],
+      "reason": "fallback after LLM error: 'gemma_26b' failed after 3 retries: Gemini API error 504",
+      "mode": "fallback",
+      "model": null,
+      "latency_seconds": 0.0,
+      "wait_seconds": 0.0,
+      "tokens": 0,
+      "cached": false
+    }
+  },
+  {
+    "input": {
+      "question": "The Birthday of the World: and Other Stories was written by what fantasy and sci-fi author?",
+      "answer": "Ursula Kroeber Le Guin",
+      "type": "bridge",
+      "kind": "hotpotqa"
+    },
+    "output": {
+      "queries": [
+        "author of The Birthday of the World: and Other Stories"
+      ],
+      "reason": "The question asks for a single fact regarding the author of a specific book title.",
+      "mode": "rewrite",
+      "model": "gemma_26b",
+      "latency_seconds": 10.289526799984742,
+      "wait_seconds": 0.0,
+      "tokens": 662,
+      "cached": false
+    }
+  }
+]

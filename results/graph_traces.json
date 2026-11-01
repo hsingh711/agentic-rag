@@ -1,0 +1,465 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answer": "Paris",
+    "retries": 0,
+    "total_seconds": 0.8824501999770291,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "skip",
+        "confidence": 0.998,
+        "classifier_used": true,
+        "seconds": 0.8088807000021916
+      },
+      {
+        "step": "generate",
+        "chunks_used": [],
+        "answer": "Paris",
+        "model": "ollama_qwen",
+        "latency_seconds": 7.228265200013993,
+        "wait_seconds": 0.0,
+        "tokens": 34,
+        "cached": true
+      }
+    ]
+  },
+  {
+    "question": "that new matryoshka retrieval thing for multi hop qa, how does it work",
+    "answer": "MatRAG works by organizing the corpus into a DAG of clusters with progressively coarser granularity, indexed by lower Matryoshka dimensions, and uses an iterative, top-down traversal to control the hop budget and re-rank candidates.",
+    "retries": 0,
+    "total_seconds": 8.302763000014238,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.983,
+        "classifier_used": true,
+        "seconds": 0.04666910000378266
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "rewrite",
+        "queries": [
+          "how does Matryoshka Representation Learning work for multi-hop question answering"
+        ],
+        "reason": "the user is asking for the mechanism of a specific retrieval technique",
+        "model": "flash_lite_31",
+        "latency_seconds": 7.1136933999951,
+        "wait_seconds": 0.0,
+        "tokens": 525,
+        "cached": false
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "how does Matryoshka Representation Learning work for multi-hop question answering"
+        ],
+        "hits": 5,
+        "new_chunks": 5,
+        "total_chunks": 5,
+        "seconds": 1.0493946000060532
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "sufficient",
+        "missing": "",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.01767:abstract:0",
+          "2610.00940:abstract:0",
+          "2609.40121:abstract:0",
+          "2610.00928:abstract:0",
+          "2610.00526:abstract:0"
+        ],
+        "stop_reason": "sufficient",
+        "model": "flash_lite_35",
+        "latency_seconds": 1.4501716000086162,
+        "wait_seconds": 0.0,
+        "tokens": 1578,
+        "cached": true
+      },
+      {
+        "step": "generate",
+        "chunks_used": [
+          "2610.01767:abstract:0",
+          "2610.00940:abstract:0",
+          "2609.40121:abstract:0",
+          "2610.00928:abstract:0",
+          "2610.00526:abstract:0"
+        ],
+        "answer": "MatRAG works by organizing the corpus into a DAG of clusters with progressively coarser granularity, indexed by lower Matryoshka dimensions, and uses an iterative, top-down traversal to control the hop budget and re-rank candidates.",
+        "model": "ollama_qwen",
+        "latency_seconds": 1.5880044999939855,
+        "wait_seconds": 0.0,
+        "tokens": 1379,
+        "cached": true
+      }
+    ]
+  },
+  {
+    "question": "How many utterances are included in the SHAMS benchmark?",
+    "answer": "1,300",
+    "retries": 0,
+    "total_seconds": 5.190935899998294,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.985,
+        "classifier_used": true,
+        "seconds": 0.04386010000598617
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "rewrite",
+        "queries": [
+          "number of utterances in the SHAMS benchmark"
+        ],
+        "reason": "The question asks for a specific count of a property of the SHAMS benchmark.",
+        "model": "flash_lite_31",
+        "latency_seconds": 4.85052419998101,
+        "wait_seconds": 0.0,
+        "tokens": 516,
+        "cached": false
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "number of utterances in the SHAMS benchmark"
+        ],
+        "hits": 5,
+        "new_chunks": 5,
+        "total_chunks": 5,
+        "seconds": 0.19279139998252504
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "sufficient",
+        "missing": "",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.01427:abstract:0",
+          "2609.40198:abstract:0",
+          "2610.00694:abstract:0",
+          "2610.02142:abstract:0",
+          "2610.00540:abstract:0"
+        ],
+        "stop_reason": "sufficient",
+        "model": "flash_lite_35",
+        "latency_seconds": 1.059134399984032,
+        "wait_seconds": 0.0,
+        "tokens": 1801,
+        "cached": true
+      },
+      {
+        "step": "generate",
+        "chunks_used": [
+          "2610.01427:abstract:0",
+          "2609.40198:abstract:0",
+          "2610.00694:abstract:0",
+          "2610.02142:abstract:0",
+          "2610.00540:abstract:0"
+        ],
+        "answer": "1,300",
+        "model": "ollama_qwen",
+        "latency_seconds": 0.9824971999914851,
+        "wait_seconds": 0.0,
+        "tokens": 1564,
+        "cached": true
+      }
+    ]
+  },
+  {
+    "question": "Which technique projects brain deformation data into a latent space, and which benchmark has 1,300 utterances?",
+    "answer": "1) Which technique projects brain deformation data into a latent space? -> Proper Orthogonal Decomposition (POD) [2610.00554:abstract:0]\n2) Which benchmark has 1,300 utterances? -> SHAMS [2610.01427:abstract:0]",
+    "retries": 0,
+    "total_seconds": 4.6123785999952815,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.979,
+        "classifier_used": true,
+        "seconds": 0.05236629999126308
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "decompose",
+        "queries": [
+          "Which technique projects brain deformation data into a latent space?",
+          "Which benchmark has 1,300 utterances?"
+        ],
+        "reason": "The question asks for two distinct pieces of information that require separate lookups.",
+        "model": "flash_lite_31",
+        "latency_seconds": 3.2725264000182506,
+        "wait_seconds": 0.0,
+        "tokens": 557,
+        "cached": false
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "Which technique projects brain deformation data into a latent space?",
+          "Which benchmark has 1,300 utterances?"
+        ],
+        "hits": 10,
+        "new_chunks": 10,
+        "total_chunks": 10,
+        "seconds": 0.10664260000339709
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "sufficient",
+        "missing": "",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.00498:abstract:0",
+          "2610.01427:abstract:0",
+          "2610.00554:abstract:0",
+          "2609.40198:abstract:0",
+          "2610.01894:abstract:0",
+          "2610.00436:abstract:1"
+        ],
+        "stop_reason": "sufficient",
+        "model": "flash_lite_35",
+        "latency_seconds": 1.0294799999974202,
+        "wait_seconds": 0.0,
+        "tokens": 1549,
+        "cached": true
+      },
+      {
+        "step": "generate",
+        "per_part": true,
+        "parts": [
+          {
+            "question": "Which technique projects brain deformation data into a latent space?",
+            "answer": "Proper Orthogonal Decomposition (POD)",
+            "chunks_used": [
+              "2610.00498:abstract:0",
+              "2610.00554:abstract:0",
+              "2610.01894:abstract:0"
+            ],
+            "used_all_chunks": false
+          },
+          {
+            "question": "Which benchmark has 1,300 utterances?",
+            "answer": "SHAMS",
+            "chunks_used": [
+              "2610.01427:abstract:0",
+              "2609.40198:abstract:0",
+              "2610.00436:abstract:1"
+            ],
+            "used_all_chunks": false
+          }
+        ],
+        "chunks_used": [
+          "2609.40198:abstract:0",
+          "2610.00436:abstract:1",
+          "2610.00498:abstract:0",
+          "2610.00554:abstract:0",
+          "2610.01427:abstract:0",
+          "2610.01894:abstract:0"
+        ],
+        "answer": "1) Which technique projects brain deformation data into a latent space? -> Proper Orthogonal Decomposition (POD) [2610.00554:abstract:0]\n2) Which benchmark has 1,300 utterances? -> SHAMS [2610.01427:abstract:0]",
+        "model": "ollama_qwen",
+        "latency_seconds": 1.1051225999835879,
+        "wait_seconds": 0.0,
+        "tokens": 1415,
+        "cached": false
+      }
+    ]
+  },
+  {
+    "question": "What did the 2019 BERT paper report as its GLUE score?",
+    "answer": "Cannot find in the context.",
+    "retries": 2,
+    "total_seconds": 12.788786499993876,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.975,
+        "classifier_used": true,
+        "seconds": 0.07889969999087043
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "rewrite",
+        "queries": [
+          "2019 BERT paper GLUE score"
+        ],
+        "reason": "The question asks for a specific metric reported in a single document.",
+        "model": "flash_lite_31",
+        "latency_seconds": 4.969143800000893,
+        "wait_seconds": 0.0,
+        "tokens": 520,
+        "cached": false
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "2019 BERT paper GLUE score"
+        ],
+        "hits": 5,
+        "new_chunks": 5,
+        "total_chunks": 5,
+        "seconds": 0.03603970000403933
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "not_sufficient",
+        "missing": "the GLUE score reported in the 2019 BERT paper",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.01395:abstract:1",
+          "2610.00447:abstract:0",
+          "2610.00795:abstract:0",
+          "2610.01037:abstract:0",
+          "2610.00436:abstract:1"
+        ],
+        "stop_reason": null,
+        "model": "flash_lite_35",
+        "latency_seconds": 1.0813525000121444,
+        "wait_seconds": 0.0,
+        "tokens": 1333,
+        "cached": true
+      },
+      {
+        "step": "reformulate",
+        "retry": 1,
+        "mode": "retry",
+        "queries": [
+          "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding GLUE benchmark results",
+          "Devlin et al. 2019 BERT paper GLUE test set performance",
+          "What was the state-of-the-art GLUE score reported in the original BERT paper?"
+        ],
+        "reason": "These queries target the specific paper title and authors to retrieve the exact performance metrics reported in the original publication.",
+        "model": "flash_lite_31",
+        "latency_seconds": 1.489843599993037,
+        "wait_seconds": 0.0,
+        "tokens": 334,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 1,
+        "queries": [
+          "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding GLUE benchmark results",
+          "Devlin et al. 2019 BERT paper GLUE test set performance",
+          "What was the state-of-the-art GLUE score reported in the original BERT paper?"
+        ],
+        "hits": 15,
+        "new_chunks": 10,
+        "total_chunks": 15,
+        "seconds": 0.09952160000102594
+      },
+      {
+        "step": "critique",
+        "retry": 1,
+        "verdict": "not_sufficient",
+        "missing": "the GLUE score reported in the 2019 BERT paper",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.00673:abstract:0",
+          "2609.40322:abstract:0",
+          "2610.01395:abstract:1",
+          "2610.01921:abstract:0",
+          "2610.00447:abstract:0",
+          "2610.01037:abstract:0"
+        ],
+        "stop_reason": null,
+        "model": "flash_lite_31",
+        "latency_seconds": 1.6142151999811176,
+        "wait_seconds": 0.0,
+        "tokens": 1779,
+        "cached": false
+      },
+      {
+        "step": "reformulate",
+        "retry": 2,
+        "mode": "retry",
+        "queries": [
+          "BERT paper Devlin et al. 2019 GLUE benchmark table results",
+          "What is the final GLUE test score reported in the BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding paper?",
+          "BERT 2019 paper GLUE leaderboard score"
+        ],
+        "reason": "These queries specifically target the reported numerical results table within the original BERT publication to ensure the exact score is retrieved.",
+        "model": "flash_lite_31",
+        "latency_seconds": 2.6746374999929685,
+        "wait_seconds": 0.0,
+        "tokens": 396,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 2,
+        "queries": [
+          "BERT paper Devlin et al. 2019 GLUE benchmark table results",
+          "What is the final GLUE test score reported in the BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding paper?",
+          "BERT 2019 paper GLUE leaderboard score"
+        ],
+        "hits": 15,
+        "new_chunks": 9,
+        "total_chunks": 24,
+        "seconds": 0.14076740000746213
+      },
+      {
+        "step": "critique",
+        "retry": 2,
+        "verdict": "not_sufficient",
+        "missing": "the GLUE score reported in the 2019 BERT paper",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.00673:abstract:0",
+          "2609.40121:abstract:0",
+          "2609.40322:abstract:0",
+          "2610.01395:abstract:1",
+          "2610.00447:abstract:0",
+          "2610.01064:abstract:0"
+        ],
+        "stop_reason": "max_retries",
+        "model": "flash_lite_31",
+        "latency_seconds": 4.541158200008795,
+        "wait_seconds": 0.0,
+        "tokens": 1845,
+        "cached": false
+      },
+      {
+        "step": "generate",
+        "chunks_used": [
+          "2610.00673:abstract:0",
+          "2609.40121:abstract:0",
+          "2609.40322:abstract:0",
+          "2610.01395:abstract:1",
+          "2610.00447:abstract:0",
+          "2610.01064:abstract:0"
+        ],
+        "answer": "Cannot find in the context.",
+        "model": "ollama_qwen",
+        "latency_seconds": 1.0681527999986429,
+        "wait_seconds": 0.0,
+        "tokens": 1569,
+        "cached": false
+      }
+    ]
+  }
+]

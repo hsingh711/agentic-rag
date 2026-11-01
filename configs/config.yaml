@@ -1,0 +1,455 @@
+# All tunable values for the project live here. Code must read them via src/config.py.
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  labels_dir: data/labels
+  results_dir: results
+  models_dir: models
+
+ingest:
+  categories: [cs.CL, cs.IR, cs.LG]
+  max_results: 500          # dev size; scale up later (section 2 --scale)
+  request_sleep_seconds: 3  # polite delay between arXiv requests
+  page_size: 100            # results per arXiv API request
+  chunk_size_tokens: 400
+  chunk_overlap_tokens: 50
+  tokenizer: huggingface    # huggingface | whitespace (whitespace needs no download)
+  tokenizer_model: sentence-transformers/all-MiniLM-L6-v2
+  papers_file: papers.jsonl         # in paths.raw_dir
+  chunks_file: chunks.jsonl         # in paths.processed_dir
+
+# Large corpus for the vector benchmark (section 11). Uses separate files so the
+# small dev corpus above is never touched.
+scale:
+  target_abstracts: 50000
+  window_days: 7            # arXiv is queried in date windows, newest first
+  earliest_date: "2023-01-01"
+  page_size: 500
+  papers_file: papers_scale.jsonl
+  chunks_file: chunks_scale.jsonl
+  state_file: scale_state.json
+  fulltext_dir: fulltext            # in paths.raw_dir; one .txt per paper
+  fulltext_papers: 3000             # how many papers get full text downloaded
+  fulltext_max_pages: 20
+  # Full-text chunks are cut smaller than the 400-token abstract chunks: all-MiniLM-L6-v2
+  # truncates its input at 256 tokens, so a 400-token chunk would only be embedded in part
+  # (section 11 decision). Abstracts are about 250 tokens and stay one chunk either way.
+  fulltext_chunk_size_tokens: 200
+  fulltext_chunk_overlap_tokens: 30
+  # Embeddings of the scale corpus, written once as a float32 .npy next to the chunks and
+  # reused by the Qdrant build and the FAISS benchmark (section 11).
+  vectors_file: chunks_scale_vectors.npy
+  vector_ids_file: chunks_scale_ids.json
+
+embedding:
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 64
+  normalize: true
+
+vector_store:
+  # server = real Qdrant (HNSW + int8 actually used). memory/path = qdrant-client local
+  # mode, which ignores HNSW and quantization (brute force); fine for tests only.
+  mode: server              # server | path | memory
+  url: http://127.0.0.1:6333   # not "localhost": on Windows it adds a ~2 s IPv6 fallback delay per request
+  # Section 11 measurement on the 343k-chunk collection: one search costs about 2 ms over gRPC
+  # and about 28 ms through the client's HTTP transport, while the server reports under 1 ms of
+  # search time in both cases. The difference is client-side overhead, so gRPC is the default;
+  # make_client falls back to HTTP if the gRPC port is closed.
+  prefer_grpc: true
+  grpc_port: 6334
+  path: data/qdrant         # only used when mode is path
+  collection_fp32: papers_fp32
+  collection_int8: papers_int8
+  # Section 11: the large benchmark corpus lives in its own collections and is never mixed
+  # with the dev corpus the pipeline and the evaluation sets use.
+  collection_scale_fp32: scale_fp32
+  collection_scale_int8: scale_int8
+  distance: cosine
+  hnsw_m: 16
+  hnsw_ef_construct: 100
+  hnsw_ef_search: 64
+  use_quantization: true    # int8 scalar quantization (always_ram); applies to the int8 collection
+  quantization_quantile: 0.99
+  # Qdrant only builds HNSW once a segment is bigger than this. Kept tiny so the small
+  # dev corpus is really indexed with HNSW (default is 20000 KB).
+  indexing_threshold_kb: 10
+  upsert_batch_size: 256
+  wait_for_index_seconds: 120
+  # Bulk upload of the scale corpus: HNSW building is switched off while points are uploaded
+  # (threshold 0 = never index) and switched on afterwards, which is both faster and lets the
+  # index build be timed on its own.
+  bulk_upload_threshold_kb: 0
+  scale_indexing_threshold_kb: 20000   # Qdrant's own default; applies to the scale collections
+  scale_upsert_batch_size: 1000
+  scale_wait_for_index_seconds: 7200   # an HNSW build over ~300k vectors takes much longer than 120 s
+
+# Section 11: FAISS exact search vs Qdrant HNSW (fp32 and int8) on the scale corpus.
+bench:
+  n_queries: 200            # benchmark queries, sampled from the query pool with bench.seed
+  query_sources: [arxiv_chunk]   # pool sources used as queries (real questions about arXiv papers)
+  seed: 17
+  top_k: 10                 # neighbours per query; recall is measured against exact top-k
+  repeats: 3                # timed repeats per query; the fastest run of each query is kept
+  ef_search: [32, 64, 128, 256]   # hnsw_ef values measured for both collections
+  embed_batch_size: 20000   # chunks embedded and flushed to disk per block
+  output: results/vector_benchmark.json
+
+smoke_test:
+  repeats: 20               # timed repeats per query
+  output_file: results/smoke_search.txt
+
+retrieval:
+  top_k: 5
+
+llm:
+  # Free tier only. Ollama runs locally; Gemini/Gemma use the free API with billing disabled.
+  temperature: 0.0
+  timeout_seconds: 120
+  max_retries: 3                    # retries after HTTP 429 / timeouts, exponential backoff
+  backoff_base_seconds: 5           # waits 5, 10, 20 seconds
+  expected_output_tokens: 300       # used only to estimate tokens before a call (TPM throttle)
+  throttle_fraction: 0.8            # stay at 80% of each model's RPM and TPM
+  daily_stop_fraction: 0.9          # stop at 90% of each model's requests per day
+  cache_dir: data/llm_cache         # every response is cached; identical calls are never repeated
+  usage_log_path: results/llm_usage.csv
+  daily_counter_path: data/gemini_usage.json   # resets at midnight Pacific Time
+  daily_reset_timezone: America/Los_Angeles
+  # How a role with several models picks one. A cached reply for the exact call always wins
+  # (re-runs are free and identical). ordered = first model in the list with quota left
+  # (reproducible: one model serves the role until its daily stop); most_quota_left = balance
+  # usage across models (results then depend on which model a call happened to hit).
+  model_selection: ordered
+
+  # Which model(s) serve each role. A list means "use the one with the most daily quota left".
+  roles:
+    generator: ollama_qwen          # closed-book, RAG and baseline answers
+    # gemma_26b was planned here but its free endpoint fails on every non-trivial prompt
+    # (HTTP 500 / 504; tiny prompts work). Switch back once it works: ~132 calls needed.
+    label_generation: [flash_lite_31, flash_lite_35]
+    # gemma_26b retested 2026-10-03: ping OK, but 1 of 2 real reformulation prompts failed
+    # (504 / read timeout on all 4 attempts) and the other took 10 s. Lite models instead.
+    reformulator: [flash_lite_31, flash_lite_35]
+    critic: [flash_lite_31, flash_lite_35]
+    judge: [flash_35]               # RAGAS / judge on a sample (flash_25 unavailable, see below)
+    verifier_fallback: [flash_35]
+    # RAGAS judge on a sample (section 10 decision: lite models, since flash_35 allows only 20 requests/day).
+    ragas_judge: [flash_lite_31, flash_lite_35]
+
+  # model_id for Gemini models must be the exact string from AI Studio "Get code".
+  # null = not provided yet; the wrapper refuses to call a model whose model_id is null.
+  # notional_usd_per_1m_*: paid-tier price used ONLY for the cost-vs-quality report
+  # (nothing is ever charged). null = leave cost blank in the usage log.
+  models:
+    ollama_qwen:
+      provider: ollama
+      model_id: qwen2.5:3b-instruct
+      base_url: http://127.0.0.1:11434
+      num_ctx: 4096
+      # Hard cap on generated tokens. Without it one labelling prompt made the 3B model loop
+      # until the 120 s timeout on every retry (temperature 0 repeats the same loop).
+      max_output_tokens: 512
+      notional_usd_per_1m_input: null
+      notional_usd_per_1m_output: null
+    gemma_26b:                      # Gemma: no system-instruction field, no JSON mode
+      provider: gemini
+      model_id: gemma-4-26b-a4b-it
+      rpm: 30
+      tpm: 16000
+      rpd: 14400
+      supports_system_instruction: false
+      supports_json_mode: false
+      notional_usd_per_1m_input: null
+      notional_usd_per_1m_output: null
+    flash_lite_31:
+      provider: gemini
+      model_id: gemini-3.1-flash-lite
+      rpm: 15
+      tpm: 250000
+      rpd: 500
+      supports_system_instruction: true
+      supports_json_mode: true
+      notional_usd_per_1m_input: null
+      notional_usd_per_1m_output: null
+    flash_lite_35:
+      provider: gemini
+      model_id: gemini-3.5-flash-lite
+      rpm: 15
+      tpm: 250000
+      rpd: 500
+      supports_system_instruction: true
+      supports_json_mode: true
+      notional_usd_per_1m_input: null
+      notional_usd_per_1m_output: null
+    flash_25:                       # UNAVAILABLE: 404 "no longer available to new users". Not used by any role.
+      provider: gemini
+      model_id: gemini-2.5-flash
+      rpm: 5
+      tpm: 250000
+      rpd: 20
+      supports_system_instruction: true
+      supports_json_mode: true
+      notional_usd_per_1m_input: null
+      notional_usd_per_1m_output: null
+    flash_35:
+      provider: gemini
+      model_id: gemini-3.5-flash
+      rpm: 5
+      tpm: 250000
+      rpd: 20
+      supports_system_instruction: true
+      supports_json_mode: true
+      notional_usd_per_1m_input: null
+      notional_usd_per_1m_output: null
+
+baseline:
+  collection: papers_fp32           # vanilla RAG searches the full-precision collection
+
+# Section 5: retrieve/skip labels made by experiment (closed-book vs RAG with the same generator).
+labels:
+  dir: data/labels
+  pool_file: query_pool.jsonl           # all candidate queries with reference answers
+  generation_state_file: pool_state.json  # which chunks already got questions (resume)
+  details_file: necessity_details.jsonl # one line per processed query, incl. dropped ones
+  output_csv: necessity.csv
+  # Section 10a: labels from the benchmark questions (never the evaluation questions), added to training.
+  extra_csvs: [necessity_hotpotqa.csv, necessity_multihoprag.csv]
+  collection: papers_fp32
+  questions_per_chunk: 2                # "retrieve" candidates written by label_generation (Gemma)
+  chunks_per_call: 4
+  max_chunks: null                      # null = every chunk in chunks.jsonl
+  triviaqa_count: 900                   # "skip" candidates (general knowledge)
+  nq_count: 300
+  arithmetic_count: 100
+  batch_size: 100                       # write results after every batch
+  # Answer counts as correct if it equals or contains a reference, or F1 >= this.
+  # 0.5 was too loose in the full run ("2 years" vs "4 years", "Brian Wilson" vs "Carl Wilson").
+  f1_correct_threshold: 0.8
+  seed: 13
+  assumed_seconds_per_ollama_call: 1.5  # only for the estimate printed before running
+  # Hard examples that break the "research jargon -> retrieve" shortcut. Labelled by the
+  # same experiment as everything else (the experiment, not the source, decides the label).
+  hard_examples:
+    # concept_question: textbook ML/NLP/IR questions phrased with jargon; expected mostly skip.
+    concept_topics:
+      - neural network training and optimization
+      - regularization and overfitting
+      - transformer architecture and attention
+      - word embeddings and tokenization
+      - evaluation metrics for classification and ranking
+      - information retrieval basics (indexing, BM25, inverted index)
+      - convolutional and recurrent neural networks
+      - reinforcement learning fundamentals
+      - probability and statistics for machine learning
+      - large language model training (pretraining, fine-tuning, RLHF)
+      - clustering and dimensionality reduction
+      - decision trees and ensemble methods
+      - generative models (VAE, GAN, diffusion)
+      - nearest neighbour search and vector databases
+      - natural language processing tasks (NER, parsing, translation)
+    questions_per_topic: 20
+    # plain_chunk: questions about facts in OUR corpus written in plain everyday language
+    # (no paper names, no acronyms where avoidable); expected mostly retrieve.
+    plain_chunk_count: 200
+    plain_chunks_per_call: 4
+
+classifier:
+  base_model: distilbert-base-uncased
+  output_dir: models/necessity
+  splits_dir: data/labels/splits    # train/val/test CSVs saved for reproducibility
+  metrics_file: results/classifier_metrics.json
+  epochs: 3                         # CPU-only torch build here, so a small epoch count
+  early_stopping_patience: 1        # epochs without val macro-F1 improvement
+  batch_size: 16
+  learning_rate: 0.00005            # 5e-5: only ~60 steps/epoch on ~950 rows; 2e-5 risks underfitting
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  max_length: 64                    # longest query is 57 tokens
+  val_fraction: 0.1                 # 80/10/10 stratified split
+  test_fraction: 0.1
+  class_weighting: balanced         # balanced | none (labels are 60% retrieve / 40% skip)
+  seed: 13
+  # Threshold on P(retrieve). null = use the value chosen on the validation set and saved in
+  # <output_dir>/threshold.json. Missing a needed retrieval is worse than an extra one, so the
+  # chosen threshold is the highest one whose validation recall on "retrieve" is >= the target.
+  decision_threshold: null
+  target_retrieve_recall: 0.95
+  # Part of the "hard example" rows (see labels.hard_examples) is held out as a challenge
+  # set that is never trained on: it measures the jargon shortcut directly.
+  challenge_sources: [concept_question, plain_chunk]
+  challenge_size: 100
+
+reformulator:
+  max_queries: 3                    # at most this many rewritten queries / sub-questions per call
+  # Demo run (scripts/run_reformulator.py): real HotpotQA multi-hop questions plus a few
+  # vague and retry examples. Results go to the output file; calls are cached.
+  demo_hotpotqa_count: 8
+  demo_seed: 13
+  demo_output: results/reformulator_samples.json
+  demo_vague_queries:
+    - "how do they make rag better at multi hop stuff"
+    - "that new matryoshka retrieval thing"
+    - "is quantization bad for search"
+  demo_retry_cases:
+    - query: "Which retrieval method gives the best recall on HotpotQA, and how large is the gain?"
+      previous_queries: ["best retrieval method recall HotpotQA"]
+      feedback: "The passages name methods but give no recall numbers or size of improvement."
+
+critic:
+  max_retries: 2            # bounded self-critique retry loop
+  # Critic check against proxy labels from section 5 (no new labelling calls):
+  # sufficient = source chunk retrieved, RAG answer correct, answer text in the chunks;
+  # not_sufficient = source chunk not retrieved, RAG answer wrong, answer text not in the chunks.
+  eval_sources: [arxiv_chunk, plain_chunk]
+  eval_per_class: 30        # balanced sample; costs one critic call per question
+  # Harder negatives: "sufficient" rows with the source chunk removed (same-topic chunks remain,
+  # none contains the answer). Correct verdict: not_sufficient.
+  eval_near_miss_count: 30
+  eval_seed: 13
+  eval_output: results/critic_eval.json
+
+graph:
+  collection: papers_fp32
+  use_classifier: true      # false = always retrieve (ablation: classifier off)
+  max_contexts: 6           # chunks shown to critic and generator (qwen num_ctx 4096)
+  # Decomposed questions: answer each sub-question from its own chunks, then join the answers.
+  per_part_generation: true
+  per_part_contexts: 3      # chunks per sub-question
+  # Stop the retry loop early (retry rounds only). Both false = always retry up to max_retries.
+  early_stop:
+    no_new_chunks: true     # the retry found no unseen chunk: re-judging the same evidence cannot help
+    # The critic repeats the same gap (word overlap >= missing_similarity). Saved 13% of lite calls
+    # but lost 1 of 20 correct answers (results/early_stop_comparison.json): single-fact gaps are
+    # usually the question restated, so this acts like max_retries=1. Turn on only to save quota.
+    same_missing: false
+    missing_similarity: 0.8
+  # scripts/run_graph.py --compare-early-stop: proxy-labelled section 5 questions run twice.
+  compare_early_stop:
+    per_class: 10
+    seed: 7                 # different from critic.eval_seed, so other questions than the critic eval
+    output: results/early_stop_comparison.json
+  # scripts/run_graph.py --compare-multipart: pairs of answerable section 5 questions joined
+  # into one two-part question; each part scored against its reference.
+  compare_multipart:
+    pairs: 20
+    seed: 11
+    output: results/multipart_comparison.json
+  demo_output: results/graph_traces.json
+  demo_questions:
+    - "What is the capital of France?"
+    - "that new matryoshka retrieval thing for multi hop qa, how does it work"
+    - "How many utterances are included in the SHAMS benchmark?"
+    - "Which technique projects brain deformation data into a latent space, and which benchmark has 1,300 utterances?"
+    - "What did the 2019 BERT paper report as its GLUE score?"
+
+# Block 5: grounded generation (section 9).
+generation:
+  insufficient_text: "Insufficient evidence"
+  # true = when the critic still says not_sufficient after the last retry, answer
+  # "Insufficient evidence" without calling the generator. false = the generator is still asked
+  # and told to refuse when the passages do not contain the answer.
+  refuse_when_not_sufficient: false
+  demo_output: results/grounded_traces.json
+
+# Block 6: answer verification (section 9).
+verifier:
+  enabled: true                     # graph runs the verify step after generate
+  nli_model_name: cross-encoder/nli-deberta-v3-base
+  device: cpu                       # cpu | cuda | auto. cpu keeps the 4 GB card free for Ollama
+  max_length: 512                   # premise + claim tokens (model limit)
+  batch_size: 8
+  window_sentences: 2               # NLI premise = this many consecutive sentences of a chunk
+  windows_per_claim: 4              # best-overlapping windows checked per claim
+  max_claims: 8                     # claims checked per answer
+  use_llm_fallback: false           # true = re-check "unsupported" claims with role verifier_fallback (20 requests/day)
+  supported_threshold: 0.7          # max entailment probability over the contexts => supported
+  contradicted_threshold: 0.7       # max contradiction probability => contradicted (if not supported)
+
+# Section 10a: multi-hop benchmarks, each in its OWN Qdrant collection (never mixed with arXiv).
+benchmarks:
+  dir: data/benchmarks              # questions_<name>.jsonl and chunks_<name>.jsonl
+  seed: 13
+  eval_questions: 100               # first N questions of each benchmark are the evaluation set; the rest may be used for classifier labels
+  hotpotqa:
+    questions: 400                  # first N validation questions (distractor setting); their paragraphs form the corpus
+    collection: hotpotqa_fp32
+  multihoprag:
+    repo: yixuantt/MultiHopRAG
+    raw_dir: data/raw/multihoprag
+    questions: 400                  # seeded random sample over all question types
+    chunk_size_tokens: 200          # MiniLM truncates at 256 tokens, so articles are cut smaller than the arXiv chunks
+    chunk_overlap_tokens: 30
+    collection: multihoprag_fp32
+
+# Section 10: evaluation harness.
+eval:
+  results_dir: results/eval         # <dataset>_<system>.jsonl per question, summary.json, tables
+
+# Section 10: RAGAS on a small sample (judge = role ragas_judge, embeddings = local sentence-transformers).
+ragas:
+  samples_per_dataset: 50           # first N answerable questions of each evaluation set
+  systems: [vanilla, agentic_v2]
+  metrics: [faithfulness, answer_relevancy]
+  answer_relevancy_strictness: 1    # identical judge calls are cached, so several questions per answer would be identical anyway
+
+# Section 11: pipeline ablations (one knob changed at a time, arXiv evaluation questions).
+ablations:
+  # The first N questions of the evaluation set, so every configuration is scored on exactly
+  # the same questions (103 = the 100 planned plus the 3 of the pilot run, which are already
+  # stored for every configuration; a plain "new questions per run" limit would leave the
+  # configurations with different question sets).
+  questions: 103
+  results_dir: results/ablations        # per-question JSONL + summary.json, like the section 10 harness
+  table_output: results/ablations/table.md
+
+# Section 11: hybrid retrieval (dense + BM25, reciprocal rank fusion, optional cross-encoder reranker).
+hybrid:
+  candidates: 50                    # hits each retriever contributes to the fusion
+  weights: [1.0, 1.0]               # (dense, bm25); the experiment picks the weights on the development questions
+  rrf_k: 60
+  bm25_k1: 1.5
+  bm25_b: 0.75
+  reranker_model: cross-encoder/ms-marco-MiniLM-L-6-v2
+  rerank_candidates: 30
+  weight_grid: [[1.0, 1.0], [2.0, 1.0], [1.0, 2.0]]   # tried on the development questions
+  output: results/hybrid_retrieval.json
+
+# Section 12: report assets. Tables and figures are rendered from the stored results
+# JSON only; nothing here re-runs the pipeline, touches Qdrant or calls an LLM.
+report:
+  output: docs/REPORT.md
+  figures_dir: docs/figures
+  figure_dpi: 200
+  themes: [light, dark]              # each figure is rendered once per theme
+  # Source files, all written by earlier sections.
+  eval_summary: results/eval/summary.json
+  ragas_summary: results/eval/ragas_summary.json
+  ablations_summary: results/ablations/summary.json
+  classifier_metrics: results/classifier_metrics.json
+  vector_benchmark: results/vector_benchmark.json
+  # Datasets stay separate everywhere in the report; metrics are never averaged across them.
+  datasets: [arxiv, hotpotqa, multihoprag]
+  systems: [closed_book, vanilla, agentic_v2]
+  grounded_systems: [vanilla, agentic_v2]   # the two systems compared on groundedness
+  null_dataset: multihoprag                 # the only dataset with "answer absent" questions
+  labels:
+    arxiv: arXiv
+    hotpotqa: HotpotQA
+    multihoprag: MultiHop-RAG
+    closed_book: Closed-book
+    vanilla: Vanilla RAG
+    vanilla_hybrid: Vanilla RAG, hybrid
+    vanilla_hybrid_rerank: Vanilla RAG, hybrid + rerank
+    agentic: Agentic (v1)
+    agentic_v2: Agentic (v2)
+    agentic_no_classifier: Agentic (v1), no classifier
+    agentic_v2_no_classifier: Agentic (v2), no classifier
+
+# Section 12: the Streamlit demo (app/app.py). Everything the pipeline itself needs is
+# read from the blocks above; only presentation lives here.
+app:
+  title: Agentic RAG with Active Retrieval
+  subtitle: >-
+    Decides whether to retrieve, reformulates the query, critiques the evidence in a bounded
+    retry loop, answers with citations, and checks every claim against the evidence.
+  icon: "\U0001F50E"

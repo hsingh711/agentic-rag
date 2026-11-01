@@ -1,0 +1,663 @@
+{
+  "full": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.8932038834951457,
+    "relaxed_accuracy": 0.9029126213592233,
+    "relaxed_accuracy_ci95": [
+      0.8349514563106796,
+      0.9514563106796117
+    ],
+    "answerable_relaxed_accuracy": 0.9029126213592233,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.009708737864077669,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 61,
+    "unsupported_claim_rate": 0.016393442622950838,
+    "contradicted_claim_rate": 0.0,
+    "mean_model_seconds": 8.555370065060362,
+    "mean_wait_seconds": 0.0,
+    "mean_other_seconds": 0.3858028466121556,
+    "mean_tokens_local": 919.4466019417475,
+    "mean_tokens_gemini": 1450.6990291262136,
+    "mean_lite_calls": 1.3009708737864079,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9107142857142857
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "current default (agentic_v2)"
+  },
+  "no_classifier": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.6990291262135923,
+    "relaxed_accuracy": 0.6990291262135923,
+    "relaxed_accuracy_ci95": [
+      0.6019417475728155,
+      0.7864077669902912
+    ],
+    "answerable_relaxed_accuracy": 0.6990291262135923,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.18446601941747573,
+    "skip_rate": 0.0,
+    "gold_title_recall": null,
+    "claims": 84,
+    "unsupported_claim_rate": 0.20238095238095233,
+    "contradicted_claim_rate": 0.14285714285714285,
+    "mean_model_seconds": 25.325195354364308,
+    "mean_wait_seconds": 0.0,
+    "mean_other_seconds": 0.4409056262144801,
+    "mean_tokens_local": 1549.1359223300972,
+    "mean_tokens_gemini": 3948.223300970874,
+    "mean_lite_calls": 3.6116504854368934,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9285714285714286
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 0.3333333333333333
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 0.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.20833333333333334
+      }
+    },
+    "description": "block 1 off: always retrieve",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": -0.20388349514563106,
+      "ci95": [
+        -0.2912621359223301,
+        -0.11650485436893204
+      ],
+      "wins": 3,
+      "losses": 24
+    }
+  },
+  "no_reformulation": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.912621359223301,
+    "relaxed_accuracy": 0.9223300970873787,
+    "relaxed_accuracy_ci95": [
+      0.8640776699029126,
+      0.970873786407767
+    ],
+    "answerable_relaxed_accuracy": 0.9223300970873787,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.019417475728155338,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 60,
+    "unsupported_claim_rate": 0.01666666666666672,
+    "contradicted_claim_rate": 0.016666666666666666,
+    "mean_model_seconds": 4.338686272825195,
+    "mean_wait_seconds": 0.20726527149237478,
+    "mean_other_seconds": 0.299140854381495,
+    "mean_tokens_local": 892.8932038834952,
+    "mean_tokens_gemini": 1010.3786407766991,
+    "mean_lite_calls": 0.6116504854368932,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9464285714285714
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "block 2 off: search the question as typed",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": 0.019417475728155338,
+      "ci95": [
+        -0.019417475728155338,
+        0.05825242718446602
+      ],
+      "wins": 3,
+      "losses": 1
+    }
+  },
+  "no_decompose": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.8932038834951457,
+    "relaxed_accuracy": 0.9029126213592233,
+    "relaxed_accuracy_ci95": [
+      0.8349514563106796,
+      0.9514563106796117
+    ],
+    "answerable_relaxed_accuracy": 0.9029126213592233,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.009708737864077669,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 61,
+    "unsupported_claim_rate": 0.016393442622950838,
+    "contradicted_claim_rate": 0.0,
+    "mean_model_seconds": 8.555370065060362,
+    "mean_wait_seconds": 0.0,
+    "mean_other_seconds": 0.3277038942018831,
+    "mean_tokens_local": 919.4466019417475,
+    "mean_tokens_gemini": 1450.6990291262136,
+    "mean_lite_calls": 1.3009708737864079,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9107142857142857
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "block 2 partial: rewrite only, never split",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 0
+    }
+  },
+  "no_critic": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.883495145631068,
+    "relaxed_accuracy": 0.8932038834951457,
+    "relaxed_accuracy_ci95": [
+      0.8349514563106796,
+      0.9514563106796117
+    ],
+    "answerable_relaxed_accuracy": 0.8932038834951457,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.019417475728155338,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 60,
+    "unsupported_claim_rate": 0.01666666666666672,
+    "contradicted_claim_rate": 0.016666666666666666,
+    "mean_model_seconds": 4.520413262156986,
+    "mean_wait_seconds": 0.0,
+    "mean_other_seconds": 0.32159523008780067,
+    "mean_tokens_local": 909.1067961165048,
+    "mean_tokens_gemini": 323.15533980582524,
+    "mean_lite_calls": 0.6019417475728155,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.8928571428571429
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "blocks 3-4 off: evidence accepted unjudged",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": -0.009708737864077669,
+      "ci95": [
+        -0.02912621359223301,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 1
+    }
+  },
+  "retries_0": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.883495145631068,
+    "relaxed_accuracy": 0.8932038834951457,
+    "relaxed_accuracy_ci95": [
+      0.8349514563106796,
+      0.9514563106796117
+    ],
+    "answerable_relaxed_accuracy": 0.8932038834951457,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.019417475728155338,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 60,
+    "unsupported_claim_rate": 0.01666666666666672,
+    "contradicted_claim_rate": 0.016666666666666666,
+    "mean_model_seconds": 8.233522672821017,
+    "mean_wait_seconds": 0.0,
+    "mean_other_seconds": 0.33546654562899864,
+    "mean_tokens_local": 909.1067961165048,
+    "mean_tokens_gemini": 1333.8446601941748,
+    "mean_lite_calls": 1.203883495145631,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.8928571428571429
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "block 4 off: judge once, no retry",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": -0.009708737864077669,
+      "ci95": [
+        -0.02912621359223301,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 1
+    }
+  },
+  "retries_1": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.8932038834951457,
+    "relaxed_accuracy": 0.9029126213592233,
+    "relaxed_accuracy_ci95": [
+      0.8349514563106796,
+      0.9514563106796117
+    ],
+    "answerable_relaxed_accuracy": 0.9029126213592233,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.019417475728155338,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 60,
+    "unsupported_claim_rate": 0.0,
+    "contradicted_claim_rate": 0.0,
+    "mean_model_seconds": 8.406079691274146,
+    "mean_wait_seconds": 0.0,
+    "mean_other_seconds": 0.3122069126230131,
+    "mean_tokens_local": 919.6019417475728,
+    "mean_tokens_gemini": 1405.1844660194174,
+    "mean_lite_calls": 1.2621359223300972,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9107142857142857
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "at most one retry",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 0
+    }
+  },
+  "contexts_3": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.9029126213592233,
+    "relaxed_accuracy": 0.912621359223301,
+    "relaxed_accuracy_ci95": [
+      0.8543689320388349,
+      0.9611650485436893
+    ],
+    "answerable_relaxed_accuracy": 0.912621359223301,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.019417475728155338,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 60,
+    "unsupported_claim_rate": 0.01666666666666672,
+    "contradicted_claim_rate": 0.0,
+    "mean_model_seconds": 6.264201300989529,
+    "mean_wait_seconds": 1.016839311655285,
+    "mean_other_seconds": 0.2861149407792113,
+    "mean_tokens_local": 586.0097087378641,
+    "mean_tokens_gemini": 1068.2038834951456,
+    "mean_lite_calls": 1.3009708737864079,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9285714285714286
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "3 chunks shown instead of 6",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": 0.009708737864077669,
+      "ci95": [
+        -0.019417475728155338,
+        0.04854368932038835
+      ],
+      "wins": 2,
+      "losses": 1
+    }
+  },
+  "contexts_10": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.8932038834951457,
+    "relaxed_accuracy": 0.9029126213592233,
+    "relaxed_accuracy_ci95": [
+      0.8446601941747572,
+      0.9611650485436893
+    ],
+    "answerable_relaxed_accuracy": 0.9029126213592233,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.0,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 62,
+    "unsupported_claim_rate": 0.016129032258064502,
+    "contradicted_claim_rate": 0.016129032258064516,
+    "mean_model_seconds": 8.421671133987985,
+    "mean_wait_seconds": 0.09549838871631808,
+    "mean_other_seconds": 0.31750024661412735,
+    "mean_tokens_local": 953.1165048543689,
+    "mean_tokens_gemini": 1511.126213592233,
+    "mean_lite_calls": 1.3009708737864079,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9107142857142857
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "10 chunks shown instead of 6",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": 0.0,
+      "ci95": [
+        -0.02912621359223301,
+        0.02912621359223301
+      ],
+      "wins": 1,
+      "losses": 1
+    }
+  },
+  "top_k_10": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.9029126213592233,
+    "relaxed_accuracy": 0.912621359223301,
+    "relaxed_accuracy_ci95": [
+      0.8543689320388349,
+      0.9611650485436893
+    ],
+    "answerable_relaxed_accuracy": 0.912621359223301,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.009708737864077669,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 61,
+    "unsupported_claim_rate": 0.016393442622950838,
+    "contradicted_claim_rate": 0.01639344262295082,
+    "mean_model_seconds": 6.226451371855202,
+    "mean_wait_seconds": 0.954746145878023,
+    "mean_other_seconds": 0.3152124388618123,
+    "mean_tokens_local": 1073.7087378640776,
+    "mean_tokens_gemini": 1617.0388349514562,
+    "mean_lite_calls": 1.3009708737864079,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9285714285714286
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "retrieve 10 chunks per query instead of 5",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": 0.009708737864077669,
+      "ci95": [
+        0.0,
+        0.02912621359223301
+      ],
+      "wins": 1,
+      "losses": 0
+    }
+  },
+  "int8": {
+    "n": 103,
+    "n_null_questions": 0,
+    "strict_accuracy": 0.8932038834951457,
+    "relaxed_accuracy": 0.9029126213592233,
+    "relaxed_accuracy_ci95": [
+      0.8349514563106796,
+      0.9514563106796117
+    ],
+    "answerable_relaxed_accuracy": 0.9029126213592233,
+    "null_abstention_rate": null,
+    "false_abstention_rate": 0.009708737864077669,
+    "skip_rate": 0.39805825242718446,
+    "gold_title_recall": null,
+    "claims": 61,
+    "unsupported_claim_rate": 0.016393442622950838,
+    "contradicted_claim_rate": 0.0,
+    "mean_model_seconds": 8.628808852445642,
+    "mean_wait_seconds": 0.05215414565743752,
+    "mean_other_seconds": 0.31346768155033944,
+    "mean_tokens_local": 918.4271844660194,
+    "mean_tokens_gemini": 1449.2135922330096,
+    "mean_lite_calls": 1.3009708737864079,
+    "by_question_type": {
+      "arithmetic": {
+        "n": 8,
+        "relaxed_accuracy": 0.875
+      },
+      "arxiv_chunk": {
+        "n": 56,
+        "relaxed_accuracy": 0.9107142857142857
+      },
+      "concept_question": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "nq": {
+        "n": 3,
+        "relaxed_accuracy": 1.0
+      },
+      "plain_chunk": {
+        "n": 6,
+        "relaxed_accuracy": 1.0
+      },
+      "triviaqa": {
+        "n": 24,
+        "relaxed_accuracy": 0.8333333333333334
+      }
+    },
+    "description": "retrieve from the int8-quantized collection",
+    "paired_vs_full": {
+      "n": 103,
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 0
+    }
+  }
+}

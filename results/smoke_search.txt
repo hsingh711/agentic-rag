@@ -1,0 +1,54 @@
+Qdrant mode: server
+papers_fp32: 528 points, indexed_vectors=528, status=green, built in 1.5s, quantization=none
+papers_int8: 528 points, indexed_vectors=528, status=green, built in 2.1s, quantization=int8
+Corpus is small (528 chunks): fp32/int8 speed differences are expected to be tiny.
+
+Query: retrieval-augmented generation for question answering
+  [papers_fp32] median latency 15.57 ms over 20 runs
+    1. (0.572) A Matryoshka Hierarchical RAG for Efficient Multi-Hop Question Answering
+    2. (0.519) Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes
+    3. (0.508) ReHoPER: Receding-Horizon Planning for Enhanced Reasoning
+  [papers_int8] median latency 15.45 ms over 20 runs
+    1. (0.573) A Matryoshka Hierarchical RAG for Efficient Multi-Hop Question Answering
+    2. (0.518) Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes
+    3. (0.509) ReHoPER: Receding-Horizon Planning for Enhanced Reasoning
+
+Query: dense passage retrieval with contrastive learning
+  [papers_fp32] median latency 3.65 ms over 20 runs
+    1. (0.447) Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes
+    2. (0.411) MemLife: Curating and Reasoning over Long-Term Egocentric Video Memories
+    3. (0.390) CANOPY: Adaptive-Granularity Evidence Compression for Multimodal RAG
+  [papers_int8] median latency 15.76 ms over 20 runs
+    1. (0.447) Evaluating Biomedical Reranking for LLM-Based Question Answering over Longitudinal Clinical Notes
+    2. (0.413) MemLife: Curating and Reasoning over Long-Term Egocentric Video Memories
+    3. (0.392) CANOPY: Adaptive-Granularity Evidence Compression for Multimodal RAG
+
+Query: efficient fine-tuning of large language models
+  [papers_fp32] median latency 15.65 ms over 20 runs
+    1. (0.619) Linguistic Loopholes in LLM Unlearning: From a 174-Language Benchmark to Coverage-Aware Unlearning
+    2. (0.581) Which LLM to pick? Online Active Model Selection for Large Language Models
+    3. (0.572) HeadEdit: Calibrating Language Model Behavior Through the Frozen Unembedding Matrix
+  [papers_int8] median latency 15.82 ms over 20 runs
+    1. (0.620) Linguistic Loopholes in LLM Unlearning: From a 174-Language Benchmark to Coverage-Aware Unlearning
+    2. (0.581) Which LLM to pick? Online Active Model Selection for Large Language Models
+    3. (0.572) HeadEdit: Calibrating Language Model Behavior Through the Frozen Unembedding Matrix
+
+Query: reducing hallucination in language model outputs
+  [papers_fp32] median latency 15.10 ms over 20 runs
+    1. (0.451) HeadEdit: Calibrating Language Model Behavior Through the Frozen Unembedding Matrix
+    2. (0.445) How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text
+    3. (0.416) Group-Invariant Statistics Determine Embedding Geometry: Harmonic Analysis of Representations from Bach to the Night Sky
+  [papers_int8] median latency 15.35 ms over 20 runs
+    1. (0.451) HeadEdit: Calibrating Language Model Behavior Through the Frozen Unembedding Matrix
+    2. (0.446) How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text
+    3. (0.418) Group-Invariant Statistics Determine Embedding Geometry: Harmonic Analysis of Representations from Bach to the Night Sky
+
+Query: approximate nearest neighbor search
+  [papers_fp32] median latency 8.64 ms over 20 runs
+    1. (0.402) Streaming algorithms for robust max-min diversification
+    2. (0.339) ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research
+    3. (0.328) Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator
+  [papers_int8] median latency 15.24 ms over 20 runs
+    1. (0.404) Streaming algorithms for robust max-min diversification
+    2. (0.338) ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research
+    3. (0.329) Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator

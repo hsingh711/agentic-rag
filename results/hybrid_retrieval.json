@@ -1,0 +1,116 @@
+{
+  "arxiv": {
+    "weights": [
+      1.0,
+      2.0
+    ],
+    "dev_n": 200,
+    "eval_n": 75,
+    "methods": {
+      "dense": {
+        "n": 75,
+        "hit": 1.0,
+        "gold_recall": 1.0,
+        "all_gold": 1.0,
+        "median_ms": 30.778400134295225
+      },
+      "bm25": {
+        "n": 75,
+        "hit": 1.0,
+        "gold_recall": 1.0,
+        "all_gold": 1.0,
+        "median_ms": 0.17359992489218712
+      },
+      "hybrid": {
+        "n": 75,
+        "hit": 1.0,
+        "gold_recall": 1.0,
+        "all_gold": 1.0,
+        "median_ms": 30.767199816182256
+      },
+      "hybrid_rerank": {
+        "n": 75,
+        "hit": 1.0,
+        "gold_recall": 1.0,
+        "all_gold": 1.0,
+        "median_ms": 1321.0240001790226
+      }
+    }
+  },
+  "hotpotqa": {
+    "weights": [
+      2.0,
+      1.0
+    ],
+    "dev_n": 300,
+    "eval_n": 100,
+    "methods": {
+      "dense": {
+        "n": 100,
+        "hit": 1.0,
+        "gold_recall": 0.745,
+        "all_gold": 0.49,
+        "median_ms": 30.98694991786033
+      },
+      "bm25": {
+        "n": 100,
+        "hit": 0.97,
+        "gold_recall": 0.69,
+        "all_gold": 0.41,
+        "median_ms": 0.4563000984489918
+      },
+      "hybrid": {
+        "n": 100,
+        "hit": 0.99,
+        "gold_recall": 0.745,
+        "all_gold": 0.5,
+        "median_ms": 31.099600018933415
+      },
+      "hybrid_rerank": {
+        "n": 100,
+        "hit": 0.99,
+        "gold_recall": 0.805,
+        "all_gold": 0.62,
+        "median_ms": 737.5003999331966
+      }
+    }
+  },
+  "multihoprag": {
+    "weights": [
+      1.0,
+      2.0
+    ],
+    "dev_n": 263,
+    "eval_n": 84,
+    "methods": {
+      "dense": {
+        "n": 84,
+        "hit": 0.8571428571428571,
+        "gold_recall": 0.47123015873015867,
+        "all_gold": 0.16666666666666666,
+        "median_ms": 31.782899983227253
+      },
+      "bm25": {
+        "n": 84,
+        "hit": 0.9285714285714286,
+        "gold_recall": 0.5694444444444445,
+        "all_gold": 0.25,
+        "median_ms": 5.551200010813773
+      },
+      "hybrid": {
+        "n": 84,
+        "hit": 0.9166666666666666,
+        "gold_recall": 0.5337301587301588,
+        "all_gold": 0.2261904761904762,
+        "median_ms": 45.955599984154105
+      },
+      "hybrid_rerank": {
+        "n": 84,
+        "hit": 0.9047619047619048,
+        "gold_recall": 0.4652777777777776,
+        "all_gold": 0.10714285714285714,
+        "median_ms": 931.0422501293942
+      }
+    }
+  }
+}

@@ -1,0 +1,715 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answer": "Paris",
+    "verification": {
+      "status": "no_contexts",
+      "claims": [],
+      "n_claims": 0,
+      "n_supported": 0,
+      "supported_ratio": null
+    },
+    "retries": 0,
+    "total_seconds": 0.6860408000648022,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "skip",
+        "confidence": 0.998,
+        "classifier_used": true,
+        "seconds": 0.5849705000873655
+      },
+      {
+        "step": "generate",
+        "chunks_used": [],
+        "answer": "Paris",
+        "citations": [],
+        "invalid_citations": [],
+        "insufficient": false,
+        "uncited": false,
+        "model": "ollama_qwen",
+        "latency_seconds": 7.228265200013993,
+        "wait_seconds": 0.0,
+        "tokens": 34,
+        "cached": true
+      },
+      {
+        "step": "verify",
+        "status": "no_contexts",
+        "n_claims": 0,
+        "n_supported": 0,
+        "supported_ratio": null,
+        "claims": [],
+        "seconds": 0.030566500034183264
+      }
+    ]
+  },
+  {
+    "question": "that new matryoshka retrieval thing for multi hop qa, how does it work",
+    "answer": "[2610.01767:abstract:0] MatRAG, a hierarchical framework that combines RAG systems with Matryoshka Representation Learning (MRL). MatRAG addresses both kinds of cost by aligning the semantic hierarchy of a clustering structure with the nested structure of MRL. Specifically, it organizes the corpus of documents into a Directed Acyclic Graph (DAG) of clusters with progressively coarser granularity. Each level is indexed by a lower Matryoshka dimension. MatRAG pairs an iterative, top-down traversal of the DAG with an entity-driven mechanism that controls the hop budget and re-ranks candidates.",
+    "verification": {
+      "status": "verified",
+      "claims": [
+        {
+          "claim": "MatRAG, a hierarchical framework that combines RAG systems with Matryoshka Representation Learning (MRL).",
+          "label": "supported",
+          "entailment": 0.996,
+          "contradiction": 0.003,
+          "chunk_id": "2610.01767:abstract:0",
+          "method": "nli"
+        },
+        {
+          "claim": "MatRAG addresses both kinds of cost by aligning the semantic hierarchy of a clustering structure with the nested structure of MRL.",
+          "label": "supported",
+          "entailment": 0.995,
+          "contradiction": 0.007,
+          "chunk_id": "2610.01767:abstract:0",
+          "method": "nli"
+        },
+        {
+          "claim": "Specifically, it organizes the corpus of documents into a Directed Acyclic Graph (DAG) of clusters with progressively coarser granularity.",
+          "label": "supported",
+          "entailment": 0.987,
+          "contradiction": 0.002,
+          "chunk_id": "2610.01767:abstract:0",
+          "method": "nli"
+        },
+        {
+          "claim": "Each level is indexed by a lower Matryoshka dimension.",
+          "label": "supported",
+          "entailment": 0.992,
+          "contradiction": 0.002,
+          "chunk_id": "2610.01767:abstract:0",
+          "method": "nli"
+        },
+        {
+          "claim": "MatRAG pairs an iterative, top-down traversal of the DAG with an entity-driven mechanism that controls the hop budget and re-ranks candidates.",
+          "label": "supported",
+          "entailment": 0.991,
+          "contradiction": 0.002,
+          "chunk_id": "2610.01767:abstract:0",
+          "method": "nli"
+        }
+      ],
+      "n_claims": 5,
+      "n_supported": 5,
+      "supported_ratio": 1.0
+    },
+    "retries": 0,
+    "total_seconds": 11.113963700132445,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.983,
+        "classifier_used": true,
+        "seconds": 0.04574309987947345
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "rewrite",
+        "queries": [
+          "how does Matryoshka Representation Learning work for multi-hop question answering"
+        ],
+        "reason": "the user is asking for the mechanism of a specific retrieval technique",
+        "model": "flash_lite_31",
+        "latency_seconds": 7.1136933999951,
+        "wait_seconds": 0.0,
+        "tokens": 525,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "how does Matryoshka Representation Learning work for multi-hop question answering"
+        ],
+        "hits": 5,
+        "new_chunks": 5,
+        "total_chunks": 5,
+        "seconds": 0.4318562000989914
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "sufficient",
+        "missing": "",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.01767:abstract:0",
+          "2610.00940:abstract:0",
+          "2609.40121:abstract:0",
+          "2610.00928:abstract:0",
+          "2610.00526:abstract:0"
+        ],
+        "stop_reason": "sufficient",
+        "model": "flash_lite_35",
+        "latency_seconds": 1.4501716000086162,
+        "wait_seconds": 0.0,
+        "tokens": 1578,
+        "cached": true
+      },
+      {
+        "step": "generate",
+        "chunks_used": [
+          "2610.01767:abstract:0",
+          "2610.00940:abstract:0",
+          "2609.40121:abstract:0",
+          "2610.00928:abstract:0",
+          "2610.00526:abstract:0"
+        ],
+        "answer": "[2610.01767:abstract:0] MatRAG, a hierarchical framework that combines RAG systems with Matryoshka Representation Learning (MRL). MatRAG addresses both kinds of cost by aligning the semantic hierarchy of a clustering structure with the nested structure of MRL. Specifically, it organizes the corpus of documents into a Directed Acyclic Graph (DAG) of clusters with progressively coarser granularity. Each level is indexed by a lower Matryoshka dimension. MatRAG pairs an iterative, top-down traversal of the DAG with an entity-driven mechanism that controls the hop budget and re-ranks candidates.",
+        "citations": [
+          "2610.01767:abstract:0"
+        ],
+        "invalid_citations": [],
+        "insufficient": false,
+        "uncited": false,
+        "model": "ollama_qwen",
+        "latency_seconds": 59.85355839994736,
+        "wait_seconds": 0.0,
+        "tokens": 1588,
+        "cached": true
+      },
+      {
+        "step": "verify",
+        "status": "verified",
+        "n_claims": 5,
+        "n_supported": 5,
+        "supported_ratio": 1.0,
+        "claims": [
+          {
+            "claim": "MatRAG, a hierarchical framework that combines RAG systems with Matryoshka Representation Learning (MRL).",
+            "label": "supported",
+            "entailment": 0.996,
+            "contradiction": 0.003,
+            "chunk_id": "2610.01767:abstract:0",
+            "method": "nli"
+          },
+          {
+            "claim": "MatRAG addresses both kinds of cost by aligning the semantic hierarchy of a clustering structure with the nested structure of MRL.",
+            "label": "supported",
+            "entailment": 0.995,
+            "contradiction": 0.007,
+            "chunk_id": "2610.01767:abstract:0",
+            "method": "nli"
+          },
+          {
+            "claim": "Specifically, it organizes the corpus of documents into a Directed Acyclic Graph (DAG) of clusters with progressively coarser granularity.",
+            "label": "supported",
+            "entailment": 0.987,
+            "contradiction": 0.002,
+            "chunk_id": "2610.01767:abstract:0",
+            "method": "nli"
+          },
+          {
+            "claim": "Each level is indexed by a lower Matryoshka dimension.",
+            "label": "supported",
+            "entailment": 0.992,
+            "contradiction": 0.002,
+            "chunk_id": "2610.01767:abstract:0",
+            "method": "nli"
+          },
+          {
+            "claim": "MatRAG pairs an iterative, top-down traversal of the DAG with an entity-driven mechanism that controls the hop budget and re-ranks candidates.",
+            "label": "supported",
+            "entailment": 0.991,
+            "contradiction": 0.002,
+            "chunk_id": "2610.01767:abstract:0",
+            "method": "nli"
+          }
+        ],
+        "seconds": 10.563931300072
+      }
+    ]
+  },
+  {
+    "question": "How many utterances are included in the SHAMS benchmark?",
+    "answer": "[2610.01427:abstract:0] SHAMS: An Audio-Grounded Pronunciation Benchmark for Levantine Arabic\nThe SHAMS benchmark comprises 1,300 utterances.",
+    "verification": {
+      "status": "verified",
+      "claims": [
+        {
+          "claim": "SHAMS: An Audio-Grounded Pronunciation Benchmark for Levantine Arabic",
+          "label": "supported",
+          "entailment": 0.879,
+          "contradiction": 0.007,
+          "chunk_id": "2610.01427:abstract:0",
+          "method": "nli"
+        },
+        {
+          "claim": "The SHAMS benchmark comprises 1,300 utterances.",
+          "label": "supported",
+          "entailment": 0.998,
+          "contradiction": 0.001,
+          "chunk_id": "2610.01427:abstract:0",
+          "method": "nli"
+        }
+      ],
+      "n_claims": 2,
+      "n_supported": 2,
+      "supported_ratio": 1.0
+    },
+    "retries": 0,
+    "total_seconds": 2.343261499889195,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.985,
+        "classifier_used": true,
+        "seconds": 0.036017300095409155
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "rewrite",
+        "queries": [
+          "number of utterances in the SHAMS benchmark"
+        ],
+        "reason": "The question asks for a specific count of a property of the SHAMS benchmark.",
+        "model": "flash_lite_31",
+        "latency_seconds": 4.85052419998101,
+        "wait_seconds": 0.0,
+        "tokens": 516,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "number of utterances in the SHAMS benchmark"
+        ],
+        "hits": 5,
+        "new_chunks": 5,
+        "total_chunks": 5,
+        "seconds": 0.14260799996554852
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "sufficient",
+        "missing": "",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.01427:abstract:0",
+          "2609.40198:abstract:0",
+          "2610.00694:abstract:0",
+          "2610.02142:abstract:0",
+          "2610.00540:abstract:0"
+        ],
+        "stop_reason": "sufficient",
+        "model": "flash_lite_35",
+        "latency_seconds": 1.059134399984032,
+        "wait_seconds": 0.0,
+        "tokens": 1801,
+        "cached": true
+      },
+      {
+        "step": "generate",
+        "chunks_used": [
+          "2610.01427:abstract:0",
+          "2609.40198:abstract:0",
+          "2610.00694:abstract:0",
+          "2610.02142:abstract:0",
+          "2610.00540:abstract:0"
+        ],
+        "answer": "[2610.01427:abstract:0] SHAMS: An Audio-Grounded Pronunciation Benchmark for Levantine Arabic\nThe SHAMS benchmark comprises 1,300 utterances.",
+        "citations": [
+          "2610.01427:abstract:0"
+        ],
+        "invalid_citations": [],
+        "insufficient": false,
+        "uncited": false,
+        "model": "ollama_qwen",
+        "latency_seconds": 1.6129300000611693,
+        "wait_seconds": 0.0,
+        "tokens": 1726,
+        "cached": true
+      },
+      {
+        "step": "verify",
+        "status": "verified",
+        "n_claims": 2,
+        "n_supported": 2,
+        "supported_ratio": 1.0,
+        "claims": [
+          {
+            "claim": "SHAMS: An Audio-Grounded Pronunciation Benchmark for Levantine Arabic",
+            "label": "supported",
+            "entailment": 0.879,
+            "contradiction": 0.007,
+            "chunk_id": "2610.01427:abstract:0",
+            "method": "nli"
+          },
+          {
+            "claim": "The SHAMS benchmark comprises 1,300 utterances.",
+            "label": "supported",
+            "entailment": 0.998,
+            "contradiction": 0.001,
+            "chunk_id": "2610.01427:abstract:0",
+            "method": "nli"
+          }
+        ],
+        "seconds": 2.1022202000021935
+      }
+    ]
+  },
+  {
+    "question": "Which technique projects brain deformation data into a latent space, and which benchmark has 1,300 utterances?",
+    "answer": "1) Which technique projects brain deformation data into a latent space? -> Proper Orthogonal Decomposition (POD) [2610.00554:abstract:0]\n2) Which benchmark has 1,300 utterances? -> SHAMS [2610.01427:abstract:0]",
+    "verification": {
+      "status": "verified",
+      "claims": [
+        {
+          "claim": "Which technique projects brain deformation data into a latent space? Proper Orthogonal Decomposition (POD)",
+          "label": "supported",
+          "entailment": 1.0,
+          "contradiction": 1.0,
+          "chunk_id": "2610.00554:abstract:0",
+          "method": "string"
+        },
+        {
+          "claim": "Which benchmark has 1,300 utterances? SHAMS",
+          "label": "supported",
+          "entailment": 1.0,
+          "contradiction": 1.0,
+          "chunk_id": "2610.01427:abstract:0",
+          "method": "string"
+        }
+      ],
+      "n_claims": 2,
+      "n_supported": 2,
+      "supported_ratio": 1.0
+    },
+    "retries": 0,
+    "total_seconds": 2.676677200011909,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.979,
+        "classifier_used": true,
+        "seconds": 0.04048500000499189
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "decompose",
+        "queries": [
+          "Which technique projects brain deformation data into a latent space?",
+          "Which benchmark has 1,300 utterances?"
+        ],
+        "reason": "The question asks for two distinct pieces of information that require separate lookups.",
+        "model": "flash_lite_31",
+        "latency_seconds": 3.2725264000182506,
+        "wait_seconds": 0.0,
+        "tokens": 557,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "Which technique projects brain deformation data into a latent space?",
+          "Which benchmark has 1,300 utterances?"
+        ],
+        "hits": 10,
+        "new_chunks": 10,
+        "total_chunks": 10,
+        "seconds": 0.04099730006419122
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "sufficient",
+        "missing": "",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.00498:abstract:0",
+          "2610.01427:abstract:0",
+          "2610.00554:abstract:0",
+          "2609.40198:abstract:0",
+          "2610.01894:abstract:0",
+          "2610.00436:abstract:1"
+        ],
+        "stop_reason": "sufficient",
+        "model": "flash_lite_35",
+        "latency_seconds": 1.0294799999974202,
+        "wait_seconds": 0.0,
+        "tokens": 1549,
+        "cached": true
+      },
+      {
+        "step": "generate",
+        "per_part": true,
+        "parts": [
+          {
+            "question": "Which technique projects brain deformation data into a latent space?",
+            "answer": "Proper Orthogonal Decomposition (POD)",
+            "chunks_used": [
+              "2610.00498:abstract:0",
+              "2610.00554:abstract:0",
+              "2610.01894:abstract:0"
+            ],
+            "used_all_chunks": false
+          },
+          {
+            "question": "Which benchmark has 1,300 utterances?",
+            "answer": "SHAMS",
+            "chunks_used": [
+              "2610.01427:abstract:0",
+              "2609.40198:abstract:0",
+              "2610.00436:abstract:1"
+            ],
+            "used_all_chunks": false
+          }
+        ],
+        "chunks_used": [
+          "2609.40198:abstract:0",
+          "2610.00436:abstract:1",
+          "2610.00498:abstract:0",
+          "2610.00554:abstract:0",
+          "2610.01427:abstract:0",
+          "2610.01894:abstract:0"
+        ],
+        "answer": "1) Which technique projects brain deformation data into a latent space? -> Proper Orthogonal Decomposition (POD) [2610.00554:abstract:0]\n2) Which benchmark has 1,300 utterances? -> SHAMS [2610.01427:abstract:0]",
+        "model": "ollama_qwen",
+        "latency_seconds": 1.1051225999835879,
+        "wait_seconds": 0.0,
+        "tokens": 1415,
+        "cached": true
+      },
+      {
+        "step": "verify",
+        "status": "verified",
+        "n_claims": 2,
+        "n_supported": 2,
+        "supported_ratio": 1.0,
+        "claims": [
+          {
+            "claim": "Which technique projects brain deformation data into a latent space? Proper Orthogonal Decomposition (POD)",
+            "label": "supported",
+            "entailment": 1.0,
+            "contradiction": 1.0,
+            "chunk_id": "2610.00554:abstract:0",
+            "method": "string"
+          },
+          {
+            "claim": "Which benchmark has 1,300 utterances? SHAMS",
+            "label": "supported",
+            "entailment": 1.0,
+            "contradiction": 1.0,
+            "chunk_id": "2610.01427:abstract:0",
+            "method": "string"
+          }
+        ],
+        "seconds": 2.5418052000459284
+      }
+    ]
+  },
+  {
+    "question": "What did the 2019 BERT paper report as its GLUE score?",
+    "answer": "Insufficient evidence",
+    "verification": {
+      "status": "no_claims",
+      "claims": [],
+      "n_claims": 0,
+      "n_supported": 0,
+      "supported_ratio": null
+    },
+    "retries": 2,
+    "total_seconds": 0.4425668998155743,
+    "trace": [
+      {
+        "step": "classify",
+        "decision": "retrieve",
+        "confidence": 0.975,
+        "classifier_used": true,
+        "seconds": 0.03320410009473562
+      },
+      {
+        "step": "reformulate",
+        "retry": 0,
+        "mode": "rewrite",
+        "queries": [
+          "2019 BERT paper GLUE score"
+        ],
+        "reason": "The question asks for a specific metric reported in a single document.",
+        "model": "flash_lite_31",
+        "latency_seconds": 4.969143800000893,
+        "wait_seconds": 0.0,
+        "tokens": 520,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 0,
+        "queries": [
+          "2019 BERT paper GLUE score"
+        ],
+        "hits": 5,
+        "new_chunks": 5,
+        "total_chunks": 5,
+        "seconds": 0.01990890013985336
+      },
+      {
+        "step": "critique",
+        "retry": 0,
+        "verdict": "not_sufficient",
+        "missing": "the GLUE score reported in the 2019 BERT paper",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.01395:abstract:1",
+          "2610.00447:abstract:0",
+          "2610.00795:abstract:0",
+          "2610.01037:abstract:0",
+          "2610.00436:abstract:1"
+        ],
+        "stop_reason": null,
+        "model": "flash_lite_35",
+        "latency_seconds": 1.0813525000121444,
+        "wait_seconds": 0.0,
+        "tokens": 1333,
+        "cached": true
+      },
+      {
+        "step": "reformulate",
+        "retry": 1,
+        "mode": "retry",
+        "queries": [
+          "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding GLUE benchmark results",
+          "Devlin et al. 2019 BERT paper GLUE test set performance",
+          "What was the state-of-the-art GLUE score reported in the original BERT paper?"
+        ],
+        "reason": "These queries target the specific paper title and authors to retrieve the exact performance metrics reported in the original publication.",
+        "model": "flash_lite_31",
+        "latency_seconds": 1.489843599993037,
+        "wait_seconds": 0.0,
+        "tokens": 334,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 1,
+        "queries": [
+          "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding GLUE benchmark results",
+          "Devlin et al. 2019 BERT paper GLUE test set performance",
+          "What was the state-of-the-art GLUE score reported in the original BERT paper?"
+        ],
+        "hits": 15,
+        "new_chunks": 10,
+        "total_chunks": 15,
+        "seconds": 0.07288780016824603
+      },
+      {
+        "step": "critique",
+        "retry": 1,
+        "verdict": "not_sufficient",
+        "missing": "the GLUE score reported in the 2019 BERT paper",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.00673:abstract:0",
+          "2609.40322:abstract:0",
+          "2610.01395:abstract:1",
+          "2610.01921:abstract:0",
+          "2610.00447:abstract:0",
+          "2610.01037:abstract:0"
+        ],
+        "stop_reason": null,
+        "model": "flash_lite_31",
+        "latency_seconds": 1.6142151999811176,
+        "wait_seconds": 0.0,
+        "tokens": 1779,
+        "cached": true
+      },
+      {
+        "step": "reformulate",
+        "retry": 2,
+        "mode": "retry",
+        "queries": [
+          "BERT paper Devlin et al. 2019 GLUE benchmark table results",
+          "What is the final GLUE test score reported in the BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding paper?",
+          "BERT 2019 paper GLUE leaderboard score"
+        ],
+        "reason": "These queries specifically target the reported numerical results table within the original BERT publication to ensure the exact score is retrieved.",
+        "model": "flash_lite_31",
+        "latency_seconds": 2.6746374999929685,
+        "wait_seconds": 0.0,
+        "tokens": 396,
+        "cached": true
+      },
+      {
+        "step": "retrieve",
+        "retry": 2,
+        "queries": [
+          "BERT paper Devlin et al. 2019 GLUE benchmark table results",
+          "What is the final GLUE test score reported in the BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding paper?",
+          "BERT 2019 paper GLUE leaderboard score"
+        ],
+        "hits": 15,
+        "new_chunks": 9,
+        "total_chunks": 24,
+        "seconds": 0.08422249997965991
+      },
+      {
+        "step": "critique",
+        "retry": 2,
+        "verdict": "not_sufficient",
+        "missing": "the GLUE score reported in the 2019 BERT paper",
+        "confidence": 1.0,
+        "fallback": false,
+        "chunks_judged": [
+          "2610.00673:abstract:0",
+          "2609.40121:abstract:0",
+          "2609.40322:abstract:0",
+          "2610.01395:abstract:1",
+          "2610.00447:abstract:0",
+          "2610.01064:abstract:0"
+        ],
+        "stop_reason": "max_retries",
+        "model": "flash_lite_31",
+        "latency_seconds": 4.541158200008795,
+        "wait_seconds": 0.0,
+        "tokens": 1845,
+        "cached": true
+      },
+      {
+        "step": "generate",
+        "chunks_used": [
+          "2610.00673:abstract:0",
+          "2609.40121:abstract:0",
+          "2609.40322:abstract:0",
+          "2610.01395:abstract:1",
+          "2610.00447:abstract:0",
+          "2610.01064:abstract:0"
+        ],
+        "answer": "Insufficient evidence",
+        "citations": [],
+        "invalid_citations": [],
+        "insufficient": true,
+        "uncited": false,
+        "model": "ollama_qwen",
+        "latency_seconds": 1.1684198000002652,
+        "wait_seconds": 0.0,
+        "tokens": 1701,
+        "cached": true
+      },
+      {
+        "step": "verify",
+        "status": "no_claims",
+        "n_claims": 0,
+        "n_supported": 0,
+        "supported_ratio": null,
+        "claims": [],
+        "seconds": 0.03573849983513355
+      }
+    ]
+  }
+]

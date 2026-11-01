@@ -1,0 +1,284 @@
+{
+  "training": {
+    "device": "cuda",
+    "epochs_configured": 3,
+    "epochs_run": 3.0,
+    "train_seconds": 49.0,
+    "class_weights": [
+      1.1905,
+      0.862
+    ],
+    "best_val_macro_f1_at_argmax": 0.8966,
+    "val_history": [
+      {
+        "epoch": 1.0,
+        "macro_f1": 0.8458,
+        "retrieve_recall": 0.9059
+      },
+      {
+        "epoch": 2.0,
+        "macro_f1": 0.8633,
+        "retrieve_recall": 0.8471
+      },
+      {
+        "epoch": 3.0,
+        "macro_f1": 0.8966,
+        "retrieve_recall": 0.9059
+      }
+    ]
+  },
+  "splits": {
+    "train": 1181,
+    "val": 148,
+    "test": 148,
+    "challenge": 100
+  },
+  "calibration": {
+    "temperature": 1.5146,
+    "fitted_on": "validation",
+    "val_log_loss_raw": 0.2841,
+    "val_log_loss_calibrated": 0.2538
+  },
+  "threshold_selection": {
+    "threshold": 0.1592,
+    "retrieve_recall": 0.9529,
+    "skip_rate": 0.3851,
+    "macro_f1": 0.9019,
+    "target_recall": 0.95,
+    "rule": "lowered below 0.5 to reach the recall target",
+    "chosen_on": "validation"
+  },
+  "test": {
+    "metrics": {
+      "threshold": 0.1592,
+      "count": 148,
+      "accuracy": 0.8919,
+      "retrieve": {
+        "precision": 0.8966,
+        "recall": 0.9176,
+        "f1": 0.907,
+        "support": 85
+      },
+      "skip": {
+        "precision": 0.8852,
+        "recall": 0.8571,
+        "f1": 0.871,
+        "support": 63
+      },
+      "macro_f1": 0.889,
+      "retrieve_recall": 0.9176,
+      "skip_rate": 0.4122,
+      "confusion_matrix": {
+        "rows_true_cols_pred": [
+          "skip",
+          "retrieve"
+        ],
+        "matrix": [
+          [
+            54,
+            9
+          ],
+          [
+            7,
+            78
+          ]
+        ]
+      }
+    },
+    "confidence_intervals_95": {
+      "accuracy": {
+        "low": 0.8446,
+        "high": 0.9392,
+        "samples": 1000
+      },
+      "macro_f1": {
+        "low": 0.8368,
+        "high": 0.9382,
+        "samples": 1000
+      },
+      "retrieve_recall": {
+        "low": 0.8571,
+        "high": 0.9747,
+        "samples": 1000
+      },
+      "skip_rate": {
+        "low": 0.3378,
+        "high": 0.4865,
+        "samples": 1000
+      }
+    },
+    "by_source": {
+      "arithmetic": {
+        "count": 9,
+        "accuracy": 1.0,
+        "true_retrieve": 0,
+        "true_skip": 9,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "arxiv_chunk": {
+        "count": 69,
+        "accuracy": 0.9565,
+        "true_retrieve": 67,
+        "true_skip": 2,
+        "majority_label": "retrieve",
+        "minority_correct": 0,
+        "minority_total": 2
+      },
+      "concept_question": {
+        "count": 7,
+        "accuracy": 1.0,
+        "true_retrieve": 0,
+        "true_skip": 7,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "hotpotqa": {
+        "count": 10,
+        "accuracy": 0.5,
+        "true_retrieve": 8,
+        "true_skip": 2,
+        "majority_label": "retrieve",
+        "minority_correct": 1,
+        "minority_total": 2
+      },
+      "multihoprag": {
+        "count": 11,
+        "accuracy": 0.3636,
+        "true_retrieve": 4,
+        "true_skip": 7,
+        "majority_label": "skip",
+        "minority_correct": 2,
+        "minority_total": 4
+      },
+      "nq": {
+        "count": 6,
+        "accuracy": 1.0,
+        "true_retrieve": 0,
+        "true_skip": 6,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "plain_chunk": {
+        "count": 6,
+        "accuracy": 1.0,
+        "true_retrieve": 6,
+        "true_skip": 0,
+        "majority_label": "retrieve",
+        "minority_correct": 0,
+        "minority_total": 0
+      },
+      "triviaqa": {
+        "count": 30,
+        "accuracy": 0.9667,
+        "true_retrieve": 0,
+        "true_skip": 30,
+        "majority_label": "skip",
+        "minority_correct": 0,
+        "minority_total": 0
+      }
+    },
+    "calibration": {
+      "ece_raw": 0.0631,
+      "ece_calibrated": 0.0511,
+      "log_loss_raw": 0.3119,
+      "log_loss_calibrated": 0.2679
+    }
+  },
+  "baseline_always_retrieve_test": {
+    "accuracy": 0.5743,
+    "macro_f1": 0.3648,
+    "retrieve_recall": 1.0,
+    "skip_rate": 0.0
+  },
+  "cpu_latency_ms_per_query_median": 88.0376,
+  "challenge": {
+    "metrics": {
+      "threshold": 0.1592,
+      "count": 100,
+      "accuracy": 0.8,
+      "retrieve": {
+        "precision": 0.7679,
+        "recall": 0.86,
+        "f1": 0.8113,
+        "support": 50
+      },
+      "skip": {
+        "precision": 0.8409,
+        "recall": 0.74,
+        "f1": 0.7872,
+        "support": 50
+      },
+      "macro_f1": 0.7993,
+      "retrieve_recall": 0.86,
+      "skip_rate": 0.44,
+      "confusion_matrix": {
+        "rows_true_cols_pred": [
+          "skip",
+          "retrieve"
+        ],
+        "matrix": [
+          [
+            37,
+            13
+          ],
+          [
+            7,
+            43
+          ]
+        ]
+      }
+    },
+    "confidence_intervals_95": {
+      "accuracy": {
+        "low": 0.72,
+        "high": 0.87,
+        "samples": 1000
+      },
+      "macro_f1": {
+        "low": 0.7144,
+        "high": 0.8699,
+        "samples": 1000
+      },
+      "retrieve_recall": {
+        "low": 0.7551,
+        "high": 0.9412,
+        "samples": 1000
+      },
+      "skip_rate": {
+        "low": 0.34,
+        "high": 0.54,
+        "samples": 1000
+      }
+    },
+    "by_source": {
+      "concept_question": {
+        "count": 54,
+        "accuracy": 0.7222,
+        "true_retrieve": 5,
+        "true_skip": 49,
+        "majority_label": "skip",
+        "minority_correct": 2,
+        "minority_total": 5
+      },
+      "plain_chunk": {
+        "count": 46,
+        "accuracy": 0.8913,
+        "true_retrieve": 45,
+        "true_skip": 1,
+        "majority_label": "retrieve",
+        "minority_correct": 0,
+        "minority_total": 1
+      }
+    },
+    "calibration": {
+      "ece_raw": 0.1629,
+      "ece_calibrated": 0.1163,
+      "log_loss_raw": 0.6367,
+      "log_loss_calibrated": 0.4873
+    }
+  }
+}

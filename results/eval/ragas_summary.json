@@ -1,0 +1,50 @@
+{
+  "arxiv": {
+    "vanilla": {
+      "n": 40,
+      "faithfulness": 0.6875,
+      "faithfulness_n": 40,
+      "answer_relevancy": 0.33585116616323246,
+      "answer_relevancy_n": 40
+    },
+    "agentic_v2": {
+      "n": 30,
+      "faithfulness": 0.9166666666666666,
+      "faithfulness_n": 30,
+      "answer_relevancy": 0.2980943339406089,
+      "answer_relevancy_n": 30
+    }
+  },
+  "hotpotqa": {
+    "vanilla": {
+      "n": 42,
+      "faithfulness": 0.5121951219512195,
+      "faithfulness_n": 41,
+      "answer_relevancy": 0.26607067525560535,
+      "answer_relevancy_n": 42
+    },
+    "agentic_v2": {
+      "n": 22,
+      "faithfulness": 0.75,
+      "faithfulness_n": 22,
+      "answer_relevancy": 0.7904080904258891,
+      "answer_relevancy_n": 22
+    }
+  },
+  "multihoprag": {
+    "vanilla": {
+      "n": 37,
+      "faithfulness": 0.22072072072072074,
+      "faithfulness_n": 37,
+      "answer_relevancy": 0.31345174014313204,
+      "answer_relevancy_n": 37
+    },
+    "agentic_v2": {
+      "n": 24,
+      "faithfulness": 0.2506944444444445,
+      "faithfulness_n": 24,
+      "answer_relevancy": 0.5573003352509921,
+      "answer_relevancy_n": 24
+    }
+  }
+}
